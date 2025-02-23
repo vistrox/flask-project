@@ -5,8 +5,8 @@
   <head>
 
     <!-- Link to external stylesheets -->
-    <link rel="stylesheet" href="./vars.css" />
-    <link rel="stylesheet" href="./style3D.css" />
+    <link rel="stylesheet" href="{{url_for('static', filename='/LabManager_pj/Booking3D/style3D.css' )}} " />
+    <link rel="stylesheet" href="{{url_for('static', filename='/LabManager_pj/vars.css')}}" />
 
     <!-- Internal CSS reset to ensure consistent styling -->
     <style>
@@ -42,6 +42,7 @@
     <title>Document</title>
   </head>
   <body>
+    <form method="POST">
     <!-- Main container for the booking page with a background image -->
     <div
       class="booking-3-d"
@@ -65,7 +66,7 @@
           <div class="equipments2">Equipments</div>
           
           <!-- Dropdown for equipment selection -->
-          <select class="typebox-3d-select">
+          <select name="booking" class="typebox-3d-select">
             <option value="" disabled selected>Select 3D Printer</option>
             <option value="ender-3-s-1-pro">Ender-3 S1 Pro</option>
             <option value="k1">K1</option>
@@ -94,27 +95,29 @@
         <!-- Date Selection -->
         <div class="date-3-d">
           <div class="date">Date</div>
-          <input type="date" id="booking-date" class="box-date" />
+          <input type="date" id="booking-date" name="booking_date" class="box-date" required />
         </div>
 
         <!-- Time Start -->
         <div class="time-start-3-d">
           <div class="time-start">Time Start</div>
-          <input type="time" id="time-start" class="box-time-start" />
+          <input type="time" id="time-start" name="booking_start_time" class="box-time-start" required />
         </div>
 
         <!-- Time End -->
         <div class="time-end-3-d">
           <div class="time-end2">Time End</div>
-          <input type="time" id="time-end" class="box-time-end" />
+          <input type="time" id="time-end" name="booking_end_time" class="box-time-end" required />
         </div>
 
         <!-- Confirm Button -->
-        <div class="frame-23" onclick="confirmBooking()">
-            <div class="confirm">Confirm</div>
-          </div>
+        <button type="submit" class="frame-23">
+          <div class="confirm">Confirm</div>
+        </button>
         </div>
     </div>
+  </form>
+    </body>
         <script>
         function confirmBooking() {
             let type3D = document.querySelector(".typebox-3d-select").value;
@@ -146,7 +149,7 @@
     <div class="lab-manager">Lab Manager</div>
 
     <!-- 3D Printer icons/images -->
-    <img class="icon-3-d" src="icon3D.png" />
+    <img class="icon-3-d" src="{{url_for ('static', filename='/LabManager_pj/Booking3D/icon3D.png')}}" />
 
     <!-- Additional equipment details for "Creality Ender-3 S1 Pro" -->
     <div class="rec-s-1"></div>
@@ -225,16 +228,16 @@
     </div>
 
     <!-- 3D printer images -->
-    <img class="_3-d-printer-im-1" src="3dPrinter_IM.png" />
-    <img class="_3-d-printer-1" src="3DPrinter.png" />
+    <img class="_3-d-printer-im-1" src="{{url_for ('static', filename='/LabManager_pj/Booking3D/3DPrinter_IM.png')}}" />
+    <img class="_3-d-printer-1" src="{{url_for ('static', filename='/LabManager_pj/Booking3D/3DPrinter.png')}}" />
   </div>
 
   <!-- Navigation buttons and labels -->
   <div class="home">HOME</div>
-      <a href="../Home/home.html" class="home">HOME</a>
+      <a href="../" class="home">HOME</a>
       
-      <a href="../Home/home.html">
-        <img class="icon-back-1" src="iconBack.png" alt="arrow-back" />
+      <a href="../">
+        <img class="icon-back-1" src="{{url_for ('static', filename='/LabManager_pj/Booking3D/iconBack.png')}}" alt="arrow-back" />
       </a>
   <div class="heading">
     <div class="label">
@@ -243,4 +246,21 @@
 </div>
 </body>
 </html>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    const startTime = document.getElementById('booking_start_time').value;
+    const endTime = document.getElementById('booking_end_time').value;
+
+    startTime = startInput.value;
+    endTime = endInput.value; 
+    
+    if (startTime >= endTime) {
+        e.preventDefault();
+        alert('End time must be later than start time');
+    }
+});
+</script>
 {% endblock %}

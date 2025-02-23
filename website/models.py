@@ -6,8 +6,8 @@ class Booking(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     data = db.Column(db.String(10000))
     booking_date = db.Column(db.Date, nullable=False)
-    booking_start_time = db.Column(db.Time, nullable=False)
-    booking_end_time = db.Column(db.Time, nullable=False)
+    booking_start_time = db.Column(db.String(5), nullable=False)  # Will store "HH:MM"
+    booking_end_time = db.Column(db.String(5), nullable=False)    # Will store "HH:MM"
     equipment_type = db.Column(db.String(50))  # 'computer', '3d', or 'laser'
     date_created = db.Column(db.DateTime(timezone=True), default=func.now())
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
@@ -20,3 +20,8 @@ class User(db.Model, UserMixin):
     userName = db.Column(db.String(150))
     bookings = db.relationship('Booking')
     # in relationship() reference the child
+    def is_active(self):
+        return True  # This user is active
+
+    def get_id(self):
+        return str(self.id)  # Convert to string as required by Flask-Login

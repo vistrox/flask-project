@@ -16,27 +16,20 @@ def home():
 def booking_computer():
     if request.method == 'POST':
         try:
-            # Debug print to see what's being received
-            print("Form data:", request.form)
-            
+            # Get form data
             date_str = request.form.get('booking_date')
             start_time_str = request.form.get('booking_start_time')
             end_time_str = request.form.get('booking_end_time')
-            booking = request.form.get('booking')  # Changed from 'booking' to 'notes' to match form
-
-            # Debug prints
-            print(f"Date: {date_str}")
-            print(f"Start Time: {start_time_str}")
-            print(f"End Time: {end_time_str}")
-            print(f"Computer: {booking}")
+            booking = request.form.get('booking')
 
             if not all([date_str, start_time_str, end_time_str, booking]):
                 raise ValueError("Missing required fields")
 
             # Convert strings to datetime objects
             booking_date = datetime.strptime(date_str, '%Y-%m-%d').date()
-            start_time = datetime.strptime(start_time_str, '%H:%M').time()
-            end_time = datetime.strptime(end_time_str, '%H:%M').time()
+            # Just store the time string directly after validating format
+            start_time = datetime.strptime(start_time_str, '%H:%M').strftime('%H:%M')
+            end_time = datetime.strptime(end_time_str, '%H:%M').strftime('%H:%M')
 
             new_booking = Booking(
                 data=booking,
@@ -53,37 +46,103 @@ def booking_computer():
             return redirect(url_for('views.home'))
 
         except ValueError as e:
-            print(f"ValueError: {str(e)}")  # Debug print
-            flash(f'Invalid date or time format: {str(e)}', 'error')
-            return render_template("bookingCom.html", user=current_user)
-        except Exception as e:
-            print(f"Unexpected error: {str(e)}")  # Debug print
-            flash('An error occurred while booking', 'error')
             db.session.rollback()
-            return render_template("bookingCom.html", user=current_user)
+            flash(f'Invalid date or time format: {str(e)}', 'error')
+        except Exception as e:
+            db.session.rollback()
+            print(f"Unexpected error: {str(e)}")
+            flash('An error occurred while booking', 'error')
+        finally:
+            db.session.remove()  # Use remove() instead of close()
 
     return render_template("bookingCom.html", user=current_user)
 
-@views.route('/booking/3d')
+@views.route('/booking/3d', methods=['GET', 'POST'])  # Added methods=['GET', 'POST']
 @login_required
 def booking_3d():
-
     if request.method == 'POST':
-        booking = request.form.get('booking')
-        new_booking = Booking(data=booking, user_id=current_user.id)
-        db.session.add(new_booking)
-        db.session.commit()
+        try:
+            # Get form data
+            date_str = request.form.get('booking_date')
+            start_time_str = request.form.get('booking_start_time')
+            end_time_str = request.form.get('booking_end_time')
+            booking = request.form.get('booking')
+
+            if not all([date_str, start_time_str, end_time_str, booking]):
+                raise ValueError("Missing required fields")
+
+            # Convert strings to datetime objects
+            booking_date = datetime.strptime(date_str, '%Y-%m-%d').date()
+            start_time = datetime.strptime(start_time_str, '%H:%M').strftime('%H:%M')
+            end_time = datetime.strptime(end_time_str, '%H:%M').strftime('%H:%M')
+
+            new_booking = Booking(
+                data=booking,
+                booking_date=booking_date,
+                booking_start_time=start_time,
+                booking_end_time=end_time,
+                equipment_type='3d',
+                user_id=current_user.id
+            )
+            
+            db.session.add(new_booking)
+            db.session.commit()
+            flash('3D Printer booking successful!', 'success')
+            return redirect(url_for('views.home'))
+
+        except ValueError as e:
+            db.session.rollback()
+            flash(f'Invalid date or time format: {str(e)}', 'error')
+        except Exception as e:
+            db.session.rollback()
+            print(f"Unexpected error: {str(e)}")
+            flash('An error occurred while booking', 'error')
+        finally:
+            db.session.remove()
 
     return render_template("booking3D.html", user=current_user)
 
-@views.route('/booking/laser')
+@views.route('/booking/laser', methods=['GET', 'POST'])  # Added methods=['GET', 'POST']
 @login_required
 def booking_laser():
-
     if request.method == 'POST':
-        booking = request.form.get('booking')
-        new_booking = Booking(data=booking, user_id=current_user.id)
-        db.session.add(new_booking)
-        db.session.commit()
-        
+        try:
+            # Get form data
+            date_str = request.form.get('booking_date')
+            start_time_str = request.form.get('booking_start_time')
+            end_time_str = request.form.get('booking_end_time')
+            booking = request.form.get('booking')
+
+            if not all([date_str, start_time_str, end_time_str, booking]):
+                raise ValueError("Missing required fields")
+
+            # Convert strings to datetime objects
+            booking_date = datetime.strptime(date_str, '%Y-%m-%d').date()
+            start_time = datetime.strptime(start_time_str, '%H:%M').strftime('%H:%M')
+            end_time = datetime.strptime(end_time_str, '%H:%M').strftime('%H:%M')
+
+            new_booking = Booking(
+                data=booking,
+                booking_date=booking_date,
+                booking_start_time=start_time,
+                booking_end_time=end_time,
+                equipment_type='laser',
+                user_id=current_user.id
+            )
+            
+            db.session.add(new_booking)
+            db.session.commit()
+            flash('Laser cutter booking successful!', 'success')
+            return redirect(url_for('views.home'))
+
+        except ValueError as e:
+            db.session.rollback()
+            flash(f'Invalid date or time format: {str(e)}', 'error')
+        except Exception as e:
+            db.session.rollback()
+            print(f"Unexpected error: {str(e)}")
+            flash('An error occurred while booking', 'error')
+        finally:
+            db.session.remove()
+
     return render_template("bookingLaser.html", user=current_user)

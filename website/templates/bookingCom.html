@@ -4,10 +4,12 @@
 <html lang="en">
   <head>
 
-    <link rel="stylesheet" href="./vars.css" />
-    <link rel="stylesheet" href="./styleCom.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/LabManager_pj/vars.css') }}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='/LabManager_pj/BookingCom/styleCom.css') }}" />
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tac+One&display=swap'); 
+        @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
       /* Global styles */
       a,
       button,
@@ -86,13 +88,13 @@
         <!-- Time Start -->
         <div class="time-start">
             <div class="time-start2">Time Start</div>
-            <input type="time" id="time-start" name="booking_start_time" class="box-time-start" required />
+            <input type="time" id="time-start" name="booking_start_time" class="box-time-start" step="60" required />
           </div>
   
           <!-- Time End -->
           <div class="time-end">
             <div class="time-end2">Time End</div>
-            <input type="time" id="time-end" name="booking_end_time" class="box-time-end" required />
+            <input type="time" id="time-end" name="booking_end_time" class="box-time-end" step="60" required />
           </div>
   
           <!-- Change button to type="submit" -->
@@ -128,19 +130,19 @@
         <div class="frame-22"></div>
         <div class="bar"></div>
         <div class="lab-manager">Lab Manager</div>
-        <img class="icon-com" src="iconCom.png" />
+        <img class="icon-com" src="{{url_for ('static', filename='/LabManager_pj/BookingCom/iconCom.png')}}" />
         <div class="rec-room"></div>
         <div class="rec-door"></div>
-        <img class="icon-date" src="iconDate.png" />
+        <img class="icon-date" src="{{url_for ('static', filename='/LabManager_pj/BookingCom/iconDate.png')}}" />
       </div>
       
       <!-- Navigation Section -->
       <div class="home">HOME</div>
-      <a href="../" class="home">HOME</a>
+      <a href="{{ url_for('views.home') }}" class="home">HOME</a>
       
-      <img class="arrow-back" src="iconBack.png" />
+      <img class="arrow-back" src="{{url_for ('static', filename='LabManager_pj/BookingCom/iconBack.png')}}" />
       <a href="../">
-        <img class="arrow-back" src="iconBack.png" alt="arrow-back" />
+        <img class="arrow-back" src="{{url_for ('static', filename='LabManager_pj/BookingCom/iconBack.png')}}" alt="arrow-back" />
       </a>
 
       <div class="heading">
@@ -212,6 +214,9 @@
 document.querySelector('form').addEventListener('submit', function(e) {
     const startTime = document.getElementById('booking_start_time').value;
     const endTime = document.getElementById('booking_end_time').value;
+
+    startTime = startInput.value;
+    endTime = endInput.value; 
     
     if (startTime >= endTime) {
         e.preventDefault();

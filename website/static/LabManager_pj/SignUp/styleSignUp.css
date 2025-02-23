@@ -1,0 +1,154 @@
+.signup-page,
+.signup-page * {
+  box-sizing: border-box;
+}
+.signup-page {
+  background: #083877;
+  height: 1024px;
+  position: relative;
+  overflow: hidden;
+}
+.bar {
+  background: #ffffff;
+  width: 1440px;
+  height: 95px;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.07);
+}
+.lab-manager {
+  color: #344002;
+  text-align: left;
+  font-family: "TacOne-Regular", sans-serif;
+  font-size: 70px;
+  font-weight: 400;
+  position: absolute;
+  left: 49px;
+  top: 7px;
+  width: 421px;
+  height: 45px;
+}
+
+.signup-frame {
+  background: #d9d9d9;
+  border-radius: 10px;
+  width: 900px;
+  height: 680px;
+  position: absolute;
+  left: 270px;
+  top: 287px;
+}
+.button-submit {
+  background: #bd300d;
+  border-radius: 10px;
+  width: 175px;
+  height: 60px;
+  position: absolute;
+  left: 350px;
+  top: 520px;
+}
+.password-box {
+  background: #ffffff;
+  width: 485px;
+  height: 57px;
+  position: absolute;
+  left: 350px;
+  top: 330px;
+}
+.password1 {
+  color: #000000;
+  text-align: left;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 900x;
+  right: 650px;
+  top: 340px;
+}
+
+/* add */
+.passwordCF-box {
+    background: #ffffff;
+    width: 485px;
+    height: 57px;
+    position: absolute;
+    left: 350px;
+    top: 410px;
+  }
+  .password2 {
+    color: #000000;
+    text-align: left;
+    font-family: "TiltWarp-Regular", sans-serif;
+    font-size: 32px;
+    font-weight: 400;
+    position: absolute;
+    left: 900x;
+    right: 600px;
+    top: 420px;
+  }
+/*  */
+
+.email-box {
+    background: #ffffff;
+    width: 485px;
+    height: 57px;
+    position: absolute;
+    left: 350px;
+    top: 170px;
+  }
+
+.email-address {
+  color: #000000;
+  text-align: left;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 110px;
+  top: 180px;
+}
+
+/* add */
+.username-box {
+    background: #ffffff;
+    width: 485px;
+    height: 57px;
+    position: absolute;
+    left: 350px;
+    top: 250px;
+  }
+
+.userName {
+  color: #000000;
+  text-align: left;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 110px;
+  top: 260px;
+}
+/*  */
+
+.please-signup {
+  color: #000000;
+  text-align: left;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 50px;
+  font-weight: 400;
+  position: absolute;
+  left: 300px;
+  top: 70px;
+}
+.btn btn-primary {
+  color: #ffffff;
+  text-align: left;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 40px;
+  font-weight: 400;
+  position: absolute;
+  left: 669px;
+  top: 629px;
+}
