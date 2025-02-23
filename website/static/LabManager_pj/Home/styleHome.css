@@ -1,0 +1,416 @@
+.home-page,
+.home-page * {
+  box-sizing: border-box;
+}
+.home-page {
+  background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+    linear-gradient(to left, #106ee9, #106ee9);
+  height: 2054px;
+  position: relative;
+  overflow: hidden;
+
+  /* background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
+  linear-gradient(to left, #106ee9, #106ee9);
+min-height: 100vh;  
+width: 100%;
+position: relative;
+overflow-x: hidden;
+margin: 0;
+padding: 0; */
+}
+.maker-space {
+  border-radius: 10px;
+  width: 1250px;
+  height: 619px;
+  position: absolute;
+  left: 95px;
+  top: 220px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  object-fit: cover;
+}
+.button-com {
+  border-radius: 0px;
+  width: 373px;
+  height: 500px;
+  position: absolute;
+  left: 102px;
+  top: 971px;
+  overflow: visible;
+}
+.button-3-d {
+  border-radius: 0px;
+  width: 373px;
+  height: 500px;
+  position: absolute;
+  left: 537px;
+  top: 971px;
+  overflow: visible;
+}
+.button-laser {
+  border-radius: 0px;
+  width: 373px;
+  height: 500px;
+  position: absolute;
+  left: 972px;
+  top: 971px;
+  overflow: visible;
+}
+.rectangle-1 {
+  background: #ffffff;
+  width: 1440px;
+  height: 198px;
+  position: absolute;
+  left: 0px;
+  top: -23px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.rectangle-5 {
+  background: #ffffff;
+  width: 1440px;
+  height: 198px;
+  position: absolute;
+  left: 0px;
+  top: -23px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.button-login {
+  background: #bd300d;
+  border-radius: 15px;
+  width: 136px;
+  height: 48px;
+  position: absolute;
+  left: 1223px;
+  top: 63px;
+}
+.log-in {
+  color: #ffffff;
+  text-align: left;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 1262px;
+  top: 73px;
+}
+.my-profile {
+  color: #000000;
+  text-align: left;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 918px;
+  top: 76px;
+}
+.lab-manager {
+  color: #000000;
+  text-align: left;
+  font-family: "TacOne-Regular", sans-serif;
+  font-size: 75px;
+  font-weight: 400;
+  position: absolute;
+  left: 99px;
+  top: 47px;
+  width: 421px;
+  height: 45px;
+}
+.help-support {
+  color: #000000;
+  text-align: left;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 720px;
+  top: 76px;
+}
+.booking-laser-cutter {
+  color: #000000;
+  text-align: center;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 1034px;
+  top: 1308px;
+  width: 249px;
+  height: 37px;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+}
+.line-3 {
+  margin-top: -1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15);
+  border-width: 1px 0 0 0;
+  width: 80px;
+  height: 0px;
+  position: absolute;
+  left: 945px;
+  top: 759px;
+  transform-origin: 0 0;
+  transform: rotate(90deg) scale(1, 1);
+}
+.booking-3-d-printer {
+  color: #000000;
+  text-align: center;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 609px;
+  top: 1308px;
+  width: 229px;
+  height: 37px;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+}
+.line-2 {
+  background: #000000;
+  margin-top: -1px;
+  border-style: solid;
+  border-color: rgba(0, 0, 0, 0.15);
+  border-width: 1px 0 0 0;
+  width: 80px;
+  height: 0px;
+  position: absolute;
+  left: 743px;
+  top: 760px;
+  transform-origin: 0 0;
+  transform: rotate(90deg) scale(1, 1);
+}
+.frame-2 {
+  background: #eeeeee;
+  border-radius: 10px;
+  width: 343px;
+  height: 75px;
+  position: absolute;
+  left: 177px;
+  top: 2398px;
+  box-shadow: var(
+    --m3-elevation-light-3-box-shadow,
+    0px 1px 3px 0px rgba(0, 0, 0, 0.3),
+    0px 4px 8px 3px rgba(0, 0, 0, 0.15)
+  );
+  overflow: hidden;
+}
+.download-now {
+  color: #000000;
+  text-align: left;
+  font-family: "ABeeZee-Regular", sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  position: absolute;
+  left: 84px;
+  top: 24px;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.6);
+}
+.help {
+  color: #000000;
+  text-align: left;
+  font-family: "ABeeZee-Regular", sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  position: absolute;
+  left: 1203px;
+  top: 2743px;
+  width: 304px;
+  height: 48px;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.4);
+}
+.faq-customer-support-how-to-guide-contact-us-24-7 {
+  color: #000000;
+  text-align: left;
+  font-family: "ABeeZee-Regular", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  left: 1203px;
+  top: 2791px;
+  width: 304px;
+  height: 48px;
+}
+.frame-24 {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  left: 686px;
+  top: 2837px;
+  overflow: hidden;
+}
+.footer {
+  background: var(--dark, #191a23);
+  border-radius: 45px 45px 0px 0px;
+  padding: 55px 60px 50px 60px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: absolute;
+  left: 100px;
+  top: 1652px;
+}
+.lab-manager2 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "TacOne-Regular", sans-serif;
+  font-size: 64px;
+  font-weight: 400;
+  position: relative;
+  width: 421px;
+  height: 45px;
+}
+.navigation-and-contacts {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  gap: 66px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  height: 304px;
+  position: relative;
+}
+.frame-26 {
+  display: flex;
+  flex-direction: row;
+  gap: 154px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.contact-us {
+  display: flex;
+  flex-direction: column;
+  gap: 27px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.heading {
+  display: flex;
+  flex-direction: column;
+  gap: 0px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.label {
+  background: #bd300d;
+  border-radius: 7px;
+  padding: 0px 7px 0px 7px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.label2 {
+  color: #000000;
+  text-align: left;
+  font-family: var(--h4-font-family, "SpaceGrotesk-Medium", sans-serif);
+  font-size: var(--h4-font-size, 20px);
+  font-weight: var(--h4-font-weight, 500);
+  position: relative;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  position: relative;
+}
+.email-wanrapee-c-kkumail-com {
+  color: #ffffff;
+  text-align: left;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+}
+.phone-555-555-5555 {
+  color: #ffffff;
+  text-align: left;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+}
+.address-faculty-of-engineering-khon-kaen-university {
+  color: #ffffff;
+  text-align: left;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  position: relative;
+}
+.elements {
+  display: flex;
+  flex-direction: row;
+  gap: 155px;
+  align-items: center;
+  justify-content: flex-start;
+  flex-shrink: 0;
+  width: 1121px;
+  height: 29px;
+  position: relative;
+}
+.icon-com {
+  border-radius: 50px;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  left: 143px;
+  top: 993px;
+  object-fit: cover;
+}
+.icon-3-d {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 599px;
+  top: 1006px;
+  object-fit: cover;
+}
+.icon-laser {
+  width: 250px;
+  height: 250px;
+  position: absolute;
+  left: 1034px;
+  top: 1006px;
+  object-fit: cover;
+}
+.booking-computer {
+  color: #2c2c2c;
+  text-align: center;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 32px;
+  font-weight: 400;
+  position: absolute;
+  left: 168px;
+  top: 1314px;
+  width: 251px;
+  height: 75px;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+}
+.let-s-book {
+  color: #ffffff;
+  text-align: center;
+  font-family: "TiltWarp-Regular", sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  position: absolute;
+  left: 95px;
+  top: 896px;
+  width: 251px;
+  height: 75px;
+  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
+}

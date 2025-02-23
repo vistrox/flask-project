@@ -1,0 +1,246 @@
+{% extends "base.html" %} {% block title %}booking3D{% endblock %}
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <!-- Link to external stylesheets -->
+    <link rel="stylesheet" href="./vars.css" />
+    <link rel="stylesheet" href="./style3D.css" />
+
+    <!-- Internal CSS reset to ensure consistent styling -->
+    <style>
+      a,
+      button,
+      input,
+      select,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        background: none;
+        -webkit-font-smoothing: antialiased;
+      }
+
+      menu,
+      ol,
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+
+    <!-- Page Title -->
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Main container for the booking page with a background image -->
+    <div
+      class="booking-3-d"
+      style="
+        background: url(booking-3-d.png) center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      "
+    >
+      <!-- Booking section -->
+      <div class="booking">
+        <!-- Rec booking section (likely for a rectangle or container) -->
+        <div class="rec-booking"></div>
+
+        <!-- Booking text label -->
+        <div class="booking2">Booking</div>
+
+
+        <!-- Equipments section -->
+        <div class="equipments">
+          <div class="equipments2">Equipments</div>
+          
+          <!-- Dropdown for equipment selection -->
+          <select class="typebox-3d-select">
+            <option value="" disabled selected>Select 3D Printer</option>
+            <option value="ender-3-s-1-pro">Ender-3 S1 Pro</option>
+            <option value="k1">K1</option>
+          </select>
+        </div>
+
+        <!-- Dropdown for NO. of Equipments-->
+        <div class="no-3-d">
+          <div class="no">NO.</div>
+
+          <select class="box-no">
+            <option value="" disabled selected>Select NO.</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+          </select>
+        </div>
+
+        <!-- Date Selection -->
+        <div class="date-3-d">
+          <div class="date">Date</div>
+          <input type="date" id="booking-date" class="box-date" />
+        </div>
+
+        <!-- Time Start -->
+        <div class="time-start-3-d">
+          <div class="time-start">Time Start</div>
+          <input type="time" id="time-start" class="box-time-start" />
+        </div>
+
+        <!-- Time End -->
+        <div class="time-end-3-d">
+          <div class="time-end2">Time End</div>
+          <input type="time" id="time-end" class="box-time-end" />
+        </div>
+
+        <!-- Confirm Button -->
+        <div class="frame-23" onclick="confirmBooking()">
+            <div class="confirm">Confirm</div>
+          </div>
+        </div>
+    </div>
+        <script>
+        function confirmBooking() {
+            let type3D = document.querySelector(".typebox-3d-select").value;
+            let no = document.querySelector(".box-no").value;
+            let date = document.getElementById("booking-date").value;
+            let timeStart = document.getElementById("time-start").value;
+            let timeEnd = document.getElementById("time-end").value;
+        
+            if (!type3D || !no || !date || !timeStart || !timeEnd) {
+                alert("Please fill in all fields before confirming.");
+                return;
+            }
+        
+            let message = `✅ Booking Confirmed!\n\n📌 3D Printer: ${type3D}\n🔢 NO.: ${no}\n📅 Date: ${date}\n⏰ Time: ${timeStart} - ${timeEnd}`;
+            alert(message);
+        }
+    </script>
+
+    
+
+    <!-- Horizontal line (possibly for styling or separation) -->
+    <div class="booking-line"></div>
+
+
+    <!-- Bar section (potentially used for styling or layout) -->
+    <div class="bar"></div>
+
+    <!-- Lab Manager labels -->
+    <div class="lab-manager">Lab Manager</div>
+
+    <!-- 3D Printer icons/images -->
+    <img class="icon-3-d" src="icon3D.png" />
+
+    <!-- Additional equipment details for "Creality Ender-3 S1 Pro" -->
+    <div class="rec-s-1"></div>
+    <div class="equipments-creality-ender-3-s-1-pro">
+      <span>
+        <span class="equipments-creality-ender-3-s-1-pro-span">
+          Equipments:
+        </span>
+        <span class="equipments-creality-ender-3-s-1-pro-span2">
+          Creality Ender-3 S1 Pro
+          <br />
+        </span>
+        <!-- Equipment amount -->
+        <span class="equipments-creality-ender-3-s-1-pro-span3">
+          <br />
+          Amount:
+        </span>
+        <span class="equipments-creality-ender-3-s-1-pro-span4">
+          8
+          <br />
+        </span>
+        <!-- Equipment highlight features -->
+        <span class="equipments-creality-ender-3-s-1-pro-span5">
+          <br />
+          Highlight:
+          <br />
+        </span>
+        <ul class="equipments-creality-ender-3-s-1-pro-span6">
+          <li>Printing size: 220x220x270mm</li>
+          <li>Machine Dimension: 490x455x625 mm</li>
+          <li>Printing Speed: ≤160 mm/s</li>
+          <li>Nozzle Diameter: 0.4 mm</li>
+          <li>Filament Diameter: 1.75 mm</li>
+          <li>File Transfer: Type-C USB/SD card</li>
+          <li>3D File Format: .stl/.bj/.gcode</li>
+        </ul>
+      </span>
+    </div>
+
+    <!-- Additional equipment section for "Creality K1" -->
+    <div class="rec-k-1"></div>
+    <div class="equipments-creality-k-1">
+      <span>
+        <span class="equipments-creality-k-1-span">
+          Equipments:
+        </span>
+        <span class="equipments-creality-k-1-span2">
+          Creality K1
+          <br />
+        </span>
+        <!-- Equipment amount -->
+        <span class="equipments-creality-k-1-span3">
+          <br />
+          Amount:
+        </span>
+        <span class="equipments-creality-k-1-span4">
+          10
+          <br />
+        </span>
+        <!-- Equipment highlight features -->
+        <span class="equipments-creality-k-1-span5">
+          <br />
+          Highlight:
+          <br />
+        </span>
+        <ul class="equipments-creality-k-1-span6">
+          <li>Printing size: 220x220x250mm</li>
+          <li>Machine Dimension: 355x355x480 mm</li>
+          <li>Printing Speed: ≤600 mm/s</li>
+          <li>Nozzle Diameter: 0.4 mm</li>
+          <li>Filament Diameter: 1.75 mm</li>
+          <li>File Transfer: USB drive/WiFi</li>
+          <li>3D File Format: .gcode</li>
+        </ul>
+      </span>
+    </div>
+
+    <!-- 3D printer images -->
+    <img class="_3-d-printer-im-1" src="3dPrinter_IM.png" />
+    <img class="_3-d-printer-1" src="3DPrinter.png" />
+  </div>
+
+  <!-- Navigation buttons and labels -->
+  <div class="home">HOME</div>
+      <a href="../Home/home.html" class="home">HOME</a>
+      
+      <a href="../Home/home.html">
+        <img class="icon-back-1" src="iconBack.png" alt="arrow-back" />
+      </a>
+  <div class="heading">
+    <div class="label">
+      <div class="label2">Booking 3D Printer</div>
+    </div>
+</div>
+</body>
+</html>
+{% endblock %}

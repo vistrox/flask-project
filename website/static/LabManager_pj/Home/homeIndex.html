@@ -1,0 +1,133 @@
+{% extends "base.html" %} 
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./vars.css" />
+    <link rel="stylesheet" href="./styleHome.css" />
+    <style>
+      /* Reset default styles and apply a consistent box model */
+      a,
+      button,
+      input,
+      select,
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        border: none;
+        text-decoration: none;
+        background: none;
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      /* Remove default list styles */
+      menu,
+      ol,
+      ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+    <title>Equipment Booking</title>
+  </head>
+  <body>
+    <div class="home-page">
+      <!-- Main images for different booking options -->
+      <img class="maker-space" src="MakerSpace.png" />
+      <img class="button-com" src="buttonCom.svg" />
+      <img class="button-3-d" src="button3D.svg" />
+      <img class="button-laser" src="buttonLaser.svg" />
+      
+      <!-- Decorative rectangles -->
+      <div class="rectangle-1"></div>
+      <div class="rectangle-5"></div>
+      
+      <!-- Login and navigation buttons -->
+      <div class="button-login"></div>
+      <div class="log-in">Log In</div>
+      <div class="my-profile">My Profile</div>
+      <div class="lab-manager">Lab Manager</div>
+      <div class="help-support">Help &amp; Support</div>
+      
+      <!-- Booking sections -->
+      <div class="booking-laser-cutter">Booking<br />Laser Cutter</div>
+      <div class="line-3"></div>
+      <div class="booking-3-d-printer">Booking<br />3D Printer</div>
+      <div class="line-2"></div>
+      <div class="frame-2">
+        <div class="download-now">Download Now</div>
+      </div>
+      
+      <!-- Help section -->
+      <div class="help">Help</div>
+      <div class="faq-customer-support-how-to-guide-contact-us-24-7">
+        FAQ<br /><br />Customer Support<br /><br />How to guide<br /><br />Contact us 24/7
+      </div>
+      
+      <!-- Footer section with contact details -->
+      <div class="frame-24"></div>
+      <div class="footer">
+        <div class="lab-manager2">Lab Manager</div>
+        <div class="navigation-and-contacts">
+          <div class="frame-26">
+            <div class="contact-us">
+              <div class="heading">
+                <div class="label">
+                  <div class="label2">Contact us:</div>
+                </div>
+              </div>
+              <div class="info">
+                <div class="email">Email: wanrapee.c@kkumail.com</div>
+                <div class="phone">Phone: 555-555-5555</div>
+                <div class="address">Address: Faculty of Engineering - Khon Kaen University</div>
+              </div>
+            </div>
+          </div>
+          <div class="elements"></div>
+        </div>
+      </div>
+      
+
+    <!-- Button for different equipment --> 
+    <!-- Booking Computer -->
+    <a href="../BookingCom/bookingComIndex.html">
+        <img class="button-com" src="buttonCom.svg" alt="Booking Computer" />
+    </a>
+
+    <!-- Booking 3D Printer -->
+    <a href="../Booking3D/booking3DIndex.html">
+        <img class="button-3-d" src="button3D.svg" alt="Booking 3D Printer" />
+    </a>
+    
+    <!-- Booking Laser Cutter ยังไม่แก้-->
+    <a href="bookingIndex_lasercutter.html">
+        <img class="button-laser" src="buttonLaser.svg" alt="Booking Laser Cutter" />
+    </a>
+
+    <!-- Icons for different equipment --> 
+    <img class="icon-com" src="iconCom.png" />
+    <img class="icon-3-d" src="icon3D.png" />
+    <img class="icon-laser" src="iconLaser.png" /> 
+      
+      
+      <div class="booking-computer">Booking<br />Computer</div>
+      <div class="booking-3-d-printer">Booking<br />3D Printer</div>
+      <div class="booking-laser-cutter">Booking<br />Laser Cutter</div>
+
+      <div class="let-s-book">Let’s book!</div>
+    </div>
+  </body>
+</html>
+{% endblock %}
