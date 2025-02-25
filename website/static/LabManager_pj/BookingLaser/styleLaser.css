@@ -35,7 +35,8 @@
 .booking2 {
   color: #1c2b38;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 18px;
   line-height: 18px;
   font-weight: 400;
@@ -53,7 +54,8 @@
 .time-start {
   color: var(--main-dark, #1c2b38);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 15px;
   line-height: 18px;
   font-weight: 400;
@@ -81,7 +83,8 @@
 .select-time-start {
   color: var(--dark-80, #495560);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 10px;
   line-height: 18px;
   font-weight: 400;
@@ -95,7 +98,8 @@
 .time-end {
   color: var(--main-dark, #1c2b38);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 15px;
   line-height: 18px;
   font-weight: 400;
@@ -123,7 +127,8 @@
 .select-time-end {
   color: var(--dark-80, #495560);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 10px;
   line-height: 18px;
   font-weight: 400;
@@ -147,7 +152,8 @@
 .confirm {
   color: var(--white, #ffffff);
   text-align: center;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 15px;
   font-weight: 400;
   position: relative;
@@ -169,7 +175,8 @@
 .date {
   color: var(--main-dark, #1c2b38);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 20px;
   line-height: 18px;
   font-weight: 400;
@@ -202,7 +209,8 @@
 .no {
   color: var(--main-dark, #1c2b38);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 20px;
   line-height: 18px;
   font-weight: 400;
@@ -243,7 +251,8 @@
 .equipments {
   color: var(--main-dark, #1c2b38);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 20px;
   line-height: 18px;
   font-weight: 400;
@@ -288,7 +297,8 @@
 .log-in {
   color: #ffffff;
   text-align: left;
-  font-family: "ABeeZee-Regular", sans-serif;
+  /* font-family: "ABeeZee-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 20px;
   font-weight: 400;
   position: absolute;
@@ -298,7 +308,8 @@
 .lab-manager {
   color: #344002;
   text-align: left;
-  font-family: "TacOne-Regular", sans-serif;
+  /* font-family: "TacOne-Regular", sans-serif; */
+  font-family: "Tac One", serif;
   font-size: 64px;
   font-weight: 400;
   position: absolute;
@@ -307,103 +318,133 @@
   width: 421px;
   height: 45px;
 }
-.rec-laser {
-  border-radius: 0px;
-  width: 755.78px;
-  height: 710.5px;
+.rec-sc {
+  background: #ffffff;
+  border-radius: 40px;
+  width: 752px;
+  height: 237px;
   position: absolute;
-  left: 112.22px;
-  top: 266.5px;
-  overflow: visible;
+  left: 105px;
+  top: 764px;
 }
-.equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm {
+.rec-ts {
+  background: #ffffff;
+  border-radius: 40px;
+  width: 752px;
+  height: 237px;
+  position: absolute;
+  left: 105px;
+  top: 512px;
+}
+.rec-mit {
+  background: #ffffff;
+  border-radius: 40px;
+  width: 752px;
+  height: 237px;
+  position: absolute;
+  left: 105px;
+  top: 263px;
+}
+.equipments-ts-6090-l {
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
   position: absolute;
   left: 473px;
-  top: 534px;
+  top: 544px;
   width: 371px;
   height: 218px;
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
 }
-.equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span {
+.equipments-ts-6090-l-span {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span2 {
+.equipments-ts-6090-l-span2 {
   color: #bd300d;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span3 {
+.equipments-ts-6090-l-span3 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span4 {
+.equipments-ts-6090-l-span4 {
   color: #bd300d;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span5 {
+.equipments-ts-6090-l-span5 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span6 {
+.equipments-ts-6090-l-span6 {
   color: #bd300d;
   list-style-type: disc;
   padding-left: 1em;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span7 {
+.equipments-ts-6090-l-span7 {
   color: #bd300d;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span8 {
+.equipments-ts-6090-l-span8 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span9 {
+.equipments-ts-6090-l-span9 {
   color: #bd300d;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span10 {
+.equipments-ts-6090-l-span10 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm {
+.equipments-mit {
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
@@ -414,130 +455,147 @@
   height: 261px;
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
 }
-.equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span {
+.equipments-mit-span {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span2 {
+.equipments-mit-span2 {
   color: #bd300d;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span3 {
+.equipments-mit-span3 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span4 {
+.equipments-mit-span4 {
   color: #bd300d;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span5 {
+.equipments-mit-span5 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span6 {
+.equipments-mit-span6 {
   color: #bd300d;
   list-style-type: disc;
   padding-left: 1em;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span7 {
+.equipments-mit-span7 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span8 {
+.equipments-mit-span8 {
   color: #bd300d;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span9 {
+.equipments-mit-span9 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm {
+.equipments-sctech {
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
   position: absolute;
   left: 471px;
-  top: 781px;
+  top: 793px;
   width: 372px;
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0);
 }
-.equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span {
+.equipments-sctech-span {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span2 {
+.equipments-sctech-span2 {
   color: #bd300d;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span3 {
+.equipments-sctech-span3 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span4 {
+.equipments-sctech-span4 {
   color: #bd300d;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span5 {
+.equipments-sctech-span5 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span6 {
+.equipments-sctech-span6 {
   color: #bd300d;
   list-style-type: disc;
   padding-left: 1em;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
 }
-.equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span7 {
+.equipments-sctech-span7 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   line-height: 18px;
   font-weight: 400;
@@ -555,8 +613,8 @@
   width: 284px;
   height: 294px;
   position: absolute;
-  left: 133px;
-  top: 212px;
+  left: 154px;
+  top: 221px;
   object-fit: cover;
   aspect-ratio: 284/294;
 }
@@ -564,8 +622,8 @@
   width: 369px;
   height: 197px;
   position: absolute;
-  left: 112px;
-  top: 765px;
+  left: 111px;
+  top: 781px;
   object-fit: cover;
   aspect-ratio: 369/197;
 }
@@ -573,15 +631,16 @@
   width: 285px;
   height: 243px;
   position: absolute;
-  left: 165px;
-  top: 500px;
+  left: 154px;
+  top: 515px;
   object-fit: cover;
   aspect-ratio: 285/243;
 }
 .home {
   color: #bd300d;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 32px;
   font-weight: 400;
   position: absolute;
@@ -614,7 +673,8 @@
 .label {
   color: #ffffff;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 40px;
   font-weight: 400;
   position: relative;
@@ -637,3 +697,16 @@
   object-fit: cover;
   aspect-ratio: 1;
 }
+
+.tac-one-regular {
+  font-family: "Tac One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.tilt-warp {
+  font-family: "Tilt Warp", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+

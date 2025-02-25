@@ -10,15 +10,6 @@
   height: 2054px;
   position: relative;
   overflow: hidden;
-
-  /* background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-  linear-gradient(to left, #106ee9, #106ee9);
-min-height: 100vh;  
-width: 100%;
-position: relative;
-overflow-x: hidden;
-margin: 0;
-padding: 0; */
 }
 .maker-space {
   border-radius: 10px;
@@ -75,7 +66,7 @@ padding: 0; */
   top: -23px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
-.button-login {
+.button-logout {
   background: #bd300d;
   border-radius: 15px;
   width: 136px;
@@ -84,20 +75,22 @@ padding: 0; */
   left: 1223px;
   top: 63px;
 }
-.log-in {
+.log-out {
   color: #ffffff;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 20px;
   font-weight: 400;
   position: absolute;
-  left: 1262px;
+  left: 1255px;
   top: 73px;
 }
 .my-profile {
   color: #000000;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 20px;
   font-weight: 400;
   position: absolute;
@@ -107,8 +100,9 @@ padding: 0; */
 .lab-manager {
   color: #000000;
   text-align: left;
-  font-family: "TacOne-Regular", sans-serif;
-  font-size: 75px;
+  /* font-family: "TacOne-Regular", sans-serif; */
+  font-family: "Tac One", serif;
+  font-size: 70px;
   font-weight: 400;
   position: absolute;
   left: 99px;
@@ -119,7 +113,8 @@ padding: 0; */
 .help-support {
   color: #000000;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 20px;
   font-weight: 400;
   position: absolute;
@@ -129,7 +124,8 @@ padding: 0; */
 .booking-laser-cutter {
   color: #000000;
   text-align: center;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 32px;
   font-weight: 400;
   position: absolute;
@@ -155,7 +151,8 @@ padding: 0; */
 .booking-3-d-printer {
   color: #000000;
   text-align: center;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 32px;
   font-weight: 400;
   position: absolute;
@@ -194,21 +191,12 @@ padding: 0; */
   );
   overflow: hidden;
 }
-.download-now {
-  color: #000000;
-  text-align: left;
-  font-family: "ABeeZee-Regular", sans-serif;
-  font-size: 24px;
-  font-weight: 400;
-  position: absolute;
-  left: 84px;
-  top: 24px;
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.6);
-}
+
 .help {
   color: #000000;
   text-align: left;
-  font-family: "ABeeZee-Regular", sans-serif;
+  /* font-family: "ABeeZee-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 20px;
   font-weight: 400;
   position: absolute;
@@ -221,7 +209,8 @@ padding: 0; */
 .faq-customer-support-how-to-guide-contact-us-24-7 {
   color: #000000;
   text-align: left;
-  font-family: "ABeeZee-Regular", sans-serif;
+  /* font-family: "ABeeZee-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 16px;
   font-weight: 400;
   position: absolute;
@@ -254,7 +243,8 @@ padding: 0; */
 .lab-manager2 {
   color: #ffffff;
   text-align: left;
-  font-family: "TacOne-Regular", sans-serif;
+  /* font-family: "TacOne-Regular", sans-serif; */
+  font-family: "Tac One", serif;
   font-size: 64px;
   font-weight: 400;
   position: relative;
@@ -262,6 +252,7 @@ padding: 0; */
   height: 45px;
 }
 .navigation-and-contacts {
+  font-family: "Tilt Warp", serif;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -314,7 +305,8 @@ padding: 0; */
 .label2 {
   color: #000000;
   text-align: left;
-  font-family: var(--h4-font-family, "SpaceGrotesk-Medium", sans-serif);
+  /* font-family: var(--h4-font-family, "SpaceGrotesk-Medium", sans-serif); */
+  font-family: "Tilt Warp", serif;
   font-size: var(--h4-font-size, 20px);
   font-weight: var(--h4-font-weight, 500);
   position: relative;
@@ -331,7 +323,8 @@ padding: 0; */
 .email-wanrapee-c-kkumail-com {
   color: #ffffff;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 18px;
   font-weight: 400;
   position: relative;
@@ -339,7 +332,8 @@ padding: 0; */
 .phone-555-555-5555 {
   color: #ffffff;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 18px;
   font-weight: 400;
   position: relative;
@@ -347,7 +341,8 @@ padding: 0; */
 .address-faculty-of-engineering-khon-kaen-university {
   color: #ffffff;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 18px;
   font-weight: 400;
   position: relative;
@@ -391,7 +386,8 @@ padding: 0; */
 .booking-computer {
   color: #2c2c2c;
   text-align: center;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 32px;
   font-weight: 400;
   position: absolute;
@@ -404,7 +400,8 @@ padding: 0; */
 .let-s-book {
   color: #ffffff;
   text-align: center;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 45px;
   font-weight: 400;
   position: absolute;
@@ -414,3 +411,17 @@ padding: 0; */
   height: 75px;
   -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
 }
+
+.tac-one-regular {
+  font-family: "Tac One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.tilt-warp {
+  font-family: "Tilt Warp", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+
+

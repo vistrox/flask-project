@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="./styleLaser.css" />
 
     <style>
+      
+      @import url('https://fonts.googleapis.com/css2?family=Tac+One&display=swap'); 
+      @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
       a,
       button,
       input,
@@ -39,6 +42,7 @@
     <title>Document</title>
   </head>
   <body>
+    <!-- Booking Laser Section -->
     <div
       class="booking-laser"
       style="
@@ -50,244 +54,163 @@
       <div class="booking">
         <div class="bookingframe"></div>
         <div class="booking2">Booking</div>
-        <div class="time-start-laser">
-          <div class="time-start">Time Start</div>
-          <div class="box-time-start">
-            <div class="select-time-start">Select Time Start</div>
-          </div>
-        </div>
-        <div class="time-end-laser">
-          <div class="time-end">Time End</div>
-          <div class="box-time-end">
-            <div class="select-time-end">Select Time End</div>
-          </div>
-        </div>
-        <div class="confirm-button">
-          <div class="confirm">confirm</div>
-        </div>
+
+        <!-- Horizontal Line -->
         <div class="booking-line"></div>
-        <div class="date-laser">
-          <div class="date">Date</div>
-          <div class="box-date"></div>
-        </div>
-        <div class="no-laser">
-          <div class="no">NO.</div>
-          <div class="no-box"></div>
-          <img class="vector" src="vector0.svg" />
-        </div>
+
+        <!-- Equipments section -->
         <div class="equipments-laser">
-          <div class="equipments">Equipments</div>
-          <div class="box-select-laser"></div>
-          <img class="vector2" src="vector1.svg" />
+            <div class="equipments">Equipments</div>
+            
+            <!-- Dropdown for equipment selection -->
+            <select class="box-select-laser">
+              <option value="" disabled selected>Select Laser Cutter</option>
+              <option value="MIT Laser 6040">MIT Laser 6040</option>
+              <option value="TS6090L">TS6090L</option>
+              <option value="SCTECH 1390E-Series">SCTECH 1390E-Series</option>
+            </select>
         </div>
+        
+        <!-- Dropdown for NO. of Equipments-->
+        <div class="no-laser">
+            <div class="no">NO.</div>
+  
+            <select class="no-box">
+              <option value="" disabled selected>Select NO.</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+            </select>
+          </div>
+        
+        <!-- Date Selection -->
+        <div class="date-laser">
+            <div class="date">Date</div>
+            <input type="date" id="booking-date" class="box-date" />
+          </div>
+
+        <!-- Time Start -->
+        <div class="time-start-laser">
+            <div class="time-start">Time Start</div>
+            <input type="time" id="time-start" class="box-time-start" />
+        </div>
+  
+          <!-- Time End -->
+        <div class="time-end-laser">
+            <div class="time-end">Time End</div>
+            <input type="time" id="time-end" class="box-time-end" />
+        </div>
+
+        <!-- Confirm Button -->
+        <div class="confirm-button" onclick="confirmBooking()">
+            <div class="confirm">Confirm</div>
+          </div>
+        </div>
+    </div>
+        <script>
+        function confirmBooking() {
+            let typeLaser = document.querySelector(".box-select-laser").value;
+            let no = document.querySelector(".no-box").value;
+            let date = document.getElementById("booking-date").value;
+            let timeStart = document.getElementById("time-start").value;
+            let timeEnd = document.getElementById("time-end").value;
+        
+            if (!typeLaser || !no || !date || !timeStart || !timeEnd) {
+                alert("Please fill in all fields before confirming.");
+                return;
+            }
+        
+            let message = `✅ Booking Confirmed!\n\n📌 Laser Cutter: ${typeLaser}\n🔢 NO.: ${no}\n📅 Date: ${date}\n⏰ Time: ${timeStart} - ${timeEnd}`;
+            alert(message);
+        }
+    </script>
+  
+
+        <!-- Bar Section -->
         <div class="bar"></div>
+
+        <!-- Log In Section -->
         <div class="log-in">Log In</div>
+
+        <!-- Lab Manager Section -->
         <div class="lab-manager">Lab Manager</div>
-        <img class="rec-laser" src="rec-laser0.svg" />
-        <div
-          class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm"
-        >
+
+        <!-- Equipment Details for TS6090L -->
+        <div class="rec-ts"></div>
+        <div class="equipments-ts-6090-l">
           <span>
-            <span
-              class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span"
-            >
-              Equipments:
-            </span>
-            <span
-              class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span2"
-            >
-              TS6090L
-              <br />
-            </span>
-            <span
-              class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span3"
-            >
-              <br />
-              Amount:
-            </span>
-            <span
-              class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span4"
-            >
-              2
-              <br />
-            </span>
-            <span
-              class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span5"
-            >
-              <br />
-              Highlight:
-              <br />
-            </span>
-            <ul
-              class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span6"
-            >
-              <li>
-                applicable material: acrylic, Glass, Leather, MDF, paper,
-                Plastic, Plexiglax, Plywood, Rubber, Stone, Wood, Crystal
-              </li>
+            <span class="equipments-ts-6090-l-span">Equipments:</span>
+            <span class="equipments-ts-6090-l-span2">TS6090L<br /></span>
+            <span class="equipments-ts-6090-l-span3"><br />Amount:</span>
+            <span class="equipments-ts-6090-l-span4">2<br /></span>
+            <span class="equipments-ts-6090-l-span5"><br />Highlight:<br /></span>
+            <ul class="equipments-ts-6090-l-span6">
+              <li>applicable material: acrylic, Glass, Leather, MDF, paper, Plastic, Plexiglax, Plywood, Rubber, Stone, Wood, Crystal</li>
               <li>cutting area: 600*900mm</li>
               <li>cutting thickness: 0-30mm</li>
             </ul>
-            <span
-              class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span7"
-            >
-              <br />
-            </span>
-            <span
-              class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span8"
-            >
-              <br />
-              <br />
-            </span>
-            <span
-              class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span9"
-            >
-              <br />
-              <br />
-            </span>
-            <span
-              class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span10"
-            >
-              <br />
-              <br />
-              <br />
-            </span>
           </span>
         </div>
-        <div
-          class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm"
-        >
+
+        <!-- Equipment Details for MIT Laser 6040 -->
+        <div class="rec-mit"></div>
+        <div class="equipments-mit">
           <span>
-            <span
-              class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span"
-            >
-              Equipments:
-            </span>
-            <span
-              class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span2"
-            >
-              MIT Laser 6040
-              <br />
-            </span>
-            <span
-              class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span3"
-            >
-              <br />
-              Amount:
-            </span>
-            <span
-              class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span4"
-            >
-              2
-              <br />
-            </span>
-            <span
-              class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span5"
-            >
-              <br />
-              Highlight:
-              <br />
-            </span>
-            <ul
-              class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span6"
-            >
-              <li>
-                applicable material: acrylic, Glass, Leather, MDF, paper,
-                Plastic, Plexiglax, Plywood, Rubber, Stone, Wood, Crystal
-              </li>
+            <span class="equipments-mit-span">Equipments:</span>
+            <span class="equipments-mit-span2">MIT Laser 6040<br /></span>
+            <span class="equipments-mit-span3"><br />Amount:</span>
+            <span class="equipments-mit-span4">2<br /></span>
+            <span class="equipments-mit-span5"><br />Highlight:<br /></span>
+            <ul class="equipments-mit-span6">
+              <li>applicable material: acrylic, Glass, Leather, MDF, paper, Plastic, Plexiglax, Plywood, Rubber, Stone, Wood, Crystal</li>
               <li>cutting area: 40 x 60 cm</li>
               <li>cutting thickness: 0-25 mm</li>
             </ul>
-            <span
-              class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span7"
-            >
-              <br />
-              <br />
-            </span>
-            <span
-              class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span8"
-            >
-              <br />
-              <br />
-            </span>
-            <span
-              class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span9"
-            >
-              <br />
-              <br />
-              <br />
-            </span>
           </span>
         </div>
-        <div
-          class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm"
-        >
+
+        <!-- Equipment Details for SCTECH 1390E-Series -->
+        <div class="rec-sc"></div>
+        <div class="equipments-sctech">
           <span>
-            <span
-              class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span"
-            >
-              Equipments:
-            </span>
-            <span
-              class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span2"
-            >
-              SCTECH 1390E-Series
-              <br />
-            </span>
-            <span
-              class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span3"
-            >
-              <br />
-              Amount:
-            </span>
-            <span
-              class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span4"
-            >
-              2
-              <br />
-            </span>
-            <span
-              class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span5"
-            >
-              <br />
-              Highlight:
-              <br />
-            </span>
-            <ul
-              class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span6"
-            >
-              <li>
-                applicable material: acrylic, Glass, Leather, MDF, paper,
-                Plastic, Plexiglax, Plywood, Rubber, Stone, Wood, Crystal
-              </li>
+            <span class="equipments-sctech-span">Equipments:</span>
+            <span class="equipments-sctech-span2">SCTECH 1390E-Series<br /></span>
+            <span class="equipments-sctech-span3"><br />Amount:</span>
+            <span class="equipments-sctech-span4">2<br /></span>
+            <span class="equipments-sctech-span5"><br />Highlight:<br /></span>
+            <ul class="equipments-sctech-span6">
+              <li>applicable material: acrylic, Glass, Leather, MDF, paper, Plastic, Plexiglax, Plywood, Rubber, Stone, Wood, Crystal</li>
               <li>cutting area: 1300x900 mm</li>
               <li>cutting thickness: 0.1 - 30 mm</li>
             </ul>
-            <span
-              class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span7"
-            >
-              <br />
-              <br />
-              <br />
-            </span>
           </span>
         </div>
-        <img
-          class="laser-cutting-machine-1"
-          src="laser-cutting-machine-10.png"
-        />
-        <img class="mit-laser-1" src="mit-laser-10.png" />
-        <img class="sctech-laser-1" src="sctech-laser-10.png" />
-        <img class="ts-6090-laser-1" src="ts-6090-laser-10.png" />
+
+        <!-- Laser Cutter Images -->
+        <img class="laser-cutting-machine-1" src="iconLaser.png" />
+        <img class="mit-laser-1" src="mitLaser.png" />
+        <img class="sctech-laser-1" src="sctechLaser.png" />
+        <img class="ts-6090-laser-1" src="TS6090Laser.png" />
       </div>
-      <div class="home">HOME</div>
+
+
+      <!-- Heading Section -->
       <div class="heading">
         <div class="red-label">
           <div class="label">Booking Laser Cutter</div>
         </div>
       </div>
-      <img class="icon-back-1" src="icon-back-10.png" />
-      <img class="icon-date" src="icon-date0.png" />
+
+    <!-- Navigation buttons and labels -->
+    <div class="home">HOME</div>
+    <a href="../Home/homeIndex.html" class="home">HOME</a>
+    
+    <a href="../Home/homeIndex.html">
+        <img class="icon-back-1" src="iconBack.png" alt="arrow-back" />
+    </a>
+    </div>
+    </div>
+      <!-- Navigation Icons -->
+      <img class="icon-date" src="iconDate.png" />
     </div>
   </body>
 </html>

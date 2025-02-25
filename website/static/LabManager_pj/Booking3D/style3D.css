@@ -35,7 +35,8 @@
 .booking2 {
   color: #1c2b38;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 18px;
   line-height: 18px;
   font-weight: 400;
@@ -53,7 +54,8 @@
 .time-start {
   color: var(--main-dark, #1c2b38);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 15px;
   line-height: 18px;
   font-weight: 400;
@@ -81,7 +83,8 @@
 .select-time-start {
   color: var(--dark-80, #495560);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 10px;
   line-height: 18px;
   font-weight: 400;
@@ -95,7 +98,8 @@
 .time-end2 {
   color: var(--main-dark, #1c2b38);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 15px;
   line-height: 18px;
   font-weight: 400;
@@ -123,7 +127,8 @@
 .select-time-end {
   color: var(--dark-80, #495560);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 10px;
   line-height: 18px;
   font-weight: 400;
@@ -137,7 +142,8 @@
 .equipments2 {
   color: var(--main-dark, #1c2b38);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 20px;
   line-height: 18px;
   font-weight: 400;
@@ -162,7 +168,8 @@
 .ender-3-s-1-pro {
   color: var(--dark-80, #495560);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 14px;
   line-height: 18px;
   font-weight: 400;
@@ -194,7 +201,8 @@
 .confirm {
   color: var(--white, #ffffff);
   text-align: center;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 15px;
   font-weight: 400;
   position: relative;
@@ -217,7 +225,8 @@
 .date {
   color: var(--main-dark, #1c2b38);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 20px;
   line-height: 18px;
   font-weight: 400;
@@ -249,7 +258,8 @@
 .no {
   color: var(--main-dark, #1c2b38);
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 20px;
   line-height: 18px;
   font-weight: 400;
@@ -293,7 +303,8 @@
 .log-in {
   color: #ffffff;
   text-align: left;
-  font-family: "ABeeZee-Regular", sans-serif;
+  /* font-family: "ABeeZee-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 20px;
   font-weight: 400;
   position: absolute;
@@ -303,7 +314,8 @@
 .lab-manager {
   color: #344002;
   text-align: left;
-  font-family: "TacOne-Regular", sans-serif;
+  /* font-family: "TacOne-Regular", sans-serif; */
+  font-family: "Tac One", serif;
   font-size: 64px;
   font-weight: 400;
   position: absolute;
@@ -331,7 +343,8 @@
 }
 .equipments-creality-ender-3-s-1-pro {
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
   position: absolute;
@@ -341,31 +354,36 @@
 }
 .equipments-creality-ender-3-s-1-pro-span {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
 .equipments-creality-ender-3-s-1-pro-span2 {
   color: #bd300d;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
 .equipments-creality-ender-3-s-1-pro-span3 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
 .equipments-creality-ender-3-s-1-pro-span4 {
   color: #bd300d;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
 .equipments-creality-ender-3-s-1-pro-span5 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
@@ -373,25 +391,29 @@
   color: #bd300d;
   list-style-type: disc;
   padding-left: 1em;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
 .equipments-creality-ender-3-s-1-pro-span7 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
 .equipments-creality-ender-3-s-1-pro-span8 {
   color: #bd300d;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
 .equipments-creality-ender-3-s-1-pro-span9 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
@@ -406,7 +428,8 @@
 }
 .equipments-creality-k-1 {
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
   position: absolute;
@@ -417,31 +440,36 @@
 }
 .equipments-creality-k-1-span {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
 .equipments-creality-k-1-span2 {
   color: #bd300d;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
 .equipments-creality-k-1-span3 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
 .equipments-creality-k-1-span4 {
   color: #bd300d;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
 .equipments-creality-k-1-span5 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
@@ -449,13 +477,15 @@
   color: #bd300d;
   list-style-type: disc;
   padding-left: 1em;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
 .equipments-creality-k-1-span7 {
   color: #000000;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 17px;
   font-weight: 400;
 }
@@ -480,7 +510,8 @@
 .home {
   color: #bd300d;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 32px;
   font-weight: 400;
   position: absolute;
@@ -513,7 +544,8 @@
 .label2 {
   color: #ffffff;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 40px;
   font-weight: 400;
   position: relative;
@@ -536,3 +568,15 @@
   object-fit: cover;
   aspect-ratio: 1;
 }
+.tac-one-regular {
+    font-family: "Tac One", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  .tilt-warp {
+    font-family: "Tilt Warp", serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+  }
+  

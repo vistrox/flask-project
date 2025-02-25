@@ -3,6 +3,8 @@
 
 {% block content %}
 <style>
+    @import url('https://fonts.googleapis.com/css2?family=Tac+One&display=swap'); 
+    @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
     /* Reset default styles */
     * {
         box-sizing: border-box;
@@ -68,9 +70,9 @@
     <div class="rectangle-5"></div>
     
     <!-- Navigation elements -->
-    <div class="button-login"></div>
+    <div class="button-logout"></div>
     {% if user.is_authenticated %}
-        <a href="{{ url_for('auth.logout') }}" class="log-in">Logout</a>
+        <a href="{{ url_for('auth.logout') }}" class="log-out">Logout</a>
     {% else %}
         <a href="{{ url_for('auth.login') }}" class="log-in">Log In</a>
     {% endif %}
@@ -87,9 +89,9 @@
     <!-- Additional elements -->
     <div class="line-2"></div>
     <div class="line-3"></div>
-    <div class="frame-2">
+    <!-- <div class="frame-2">
         <div class="download-now">Download Now</div>
-    </div>
+    </div> -->
     
     <!-- Help section -->
     <div class="help">Help</div>

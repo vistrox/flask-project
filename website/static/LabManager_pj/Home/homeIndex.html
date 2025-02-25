@@ -1,7 +1,3 @@
-{% extends "base.html" %} 
-{% block title %}Home{% endblock %}
-
-{% block content %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -11,6 +7,8 @@
     <link rel="stylesheet" href="./vars.css" />
     <link rel="stylesheet" href="./styleHome.css" />
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Tac+One&display=swap'); 
+        @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
       /* Reset default styles and apply a consistent box model */
       a,
       button,
@@ -56,7 +54,7 @@
       
       <!-- Login and navigation buttons -->
       <div class="button-login"></div>
-      <div class="log-in">Log In</div>
+      <div class="log-out">Log Out</div>
       <div class="my-profile">My Profile</div>
       <div class="lab-manager">Lab Manager</div>
       <div class="help-support">Help &amp; Support</div>
@@ -111,8 +109,8 @@
         <img class="button-3-d" src="button3D.svg" alt="Booking 3D Printer" />
     </a>
     
-    <!-- Booking Laser Cutter ยังไม่แก้-->
-    <a href="bookingIndex_lasercutter.html">
+    <!-- Booking Laser Cutter -->
+    <a href="../BookingLaser/bookingLaserIndex.html">
         <img class="button-laser" src="buttonLaser.svg" alt="Booking Laser Cutter" />
     </a>
 
@@ -130,4 +128,3 @@
     </div>
   </body>
 </html>
-{% endblock %}

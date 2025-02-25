@@ -20,7 +20,8 @@
 .lab-manager {
   color: #344002;
   text-align: left;
-  font-family: "TacOne-Regular", sans-serif;
+  /* font-family: "TacOne-Regular", sans-serif; */
+  font-family: "Tac One", serif;
   font-size: 70px;
   font-weight: 400;
   position: absolute;
@@ -40,6 +41,7 @@
   top: 287px;
 }
 .button-login {
+  font-family: "Tilt Warp", serif;
   background: #bd300d;
   border-radius: 10px;
   width: 175px;
@@ -59,7 +61,8 @@
 .password {
   color: #000000;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 32px;
   font-weight: 400;
   position: absolute;
@@ -70,7 +73,8 @@
 .email-address {
   color: #000000;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 32px;
   font-weight: 400;
   position: absolute;
@@ -80,7 +84,8 @@
 .please-login {
   color: #000000;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 50px;
   font-weight: 400;
   position: absolute;
@@ -90,7 +95,8 @@
 .btn btn-primary button-login {
   color: #ffffff;
   text-align: left;
-  font-family: "TiltWarp-Regular", sans-serif;
+  /* font-family: "TiltWarp-Regular", sans-serif; */
+  font-family: "Tilt Warp", serif;
   font-size: 40px;
   font-weight: 400;
   position: absolute;
@@ -104,4 +110,16 @@
   position: absolute;
   left: 350px;
   top: 170px;
+}
+.tac-one-regular {
+  font-family: "Tac One", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+.tilt-warp {
+  font-family: "Tilt Warp", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  
 }
