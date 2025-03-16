@@ -59,11 +59,19 @@
           </div>
           <div class="no-laser">
             <div class="no">NO.</div>
+            <!-- First dropdown for laser model -->
             <select id="laser-select" name="booking" class="box-select-laser" required>
               <option value="" disabled selected>Select Laser Cutter</option>
               <option value="TS6090L">TS6090L</option>
               <option value="MIT-6040">MIT Laser 6040</option>
               <option value="SCTECH-1390E">SCTECH 1390E</option>
+            </select>
+            
+            <!-- Add this new dropdown for laser number -->
+            <select id="laser-number" name="laser_number" class="box-select-number" required>
+              <option value="" disabled selected>Select Number</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
             </select>
           </div>
           <div class="equipments-laser">

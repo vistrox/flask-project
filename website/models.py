@@ -2,26 +2,46 @@ from . import db
 from flask_login import UserMixin
 from sqlalchemy.sql import func
 
-class Booking(db.Model):
+class ComputerBooking(db.Model):
     id = db.Column(db.Integer, primary_key=True)
-    data = db.Column(db.String(10000))
+    computer_number = db.Column(db.String(10))  # e.g., 'C1', 'C2'
     booking_date = db.Column(db.Date, nullable=False)
-    booking_start_time = db.Column(db.String(5), nullable=False)  # Will store "HH:MM"
-    booking_end_time = db.Column(db.String(5), nullable=False)    # Will store "HH:MM"
-    equipment_type = db.Column(db.String(50))  # 'computer', '3d', or 'laser'
+    booking_start_time = db.Column(db.String(5), nullable=False)
+    booking_end_time = db.Column(db.String(5), nullable=False)
     date_created = db.Column(db.DateTime(timezone=True), default=func.now())
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
-    # in ForeignKey() reference the parent class "User" then the field of the parent class "id"
+
+class PrinterBooking(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    printer_model = db.Column(db.String(50))  # e.g., 'ender-3-s-1-pro', 'k1'
+    printer_number = db.Column(db.Integer)  # e.g., 1, 2, 3
+    booking_date = db.Column(db.Date, nullable=False)
+    booking_start_time = db.Column(db.String(5), nullable=False)
+    booking_end_time = db.Column(db.String(5), nullable=False)
+    date_created = db.Column(db.DateTime(timezone=True), default=func.now())
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
+
+class LaserBooking(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    laser_model = db.Column(db.String(50))  # e.g., 'TS6090L', 'MIT-6040'
+    laser_number = db.Column(db.Integer)  # e.g., 1, 2, 3
+    booking_date = db.Column(db.Date, nullable=False)
+    booking_start_time = db.Column(db.String(5), nullable=False)
+    booking_end_time = db.Column(db.String(5), nullable=False)
+    date_created = db.Column(db.DateTime(timezone=True), default=func.now())
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'))
 
 class User(db.Model, UserMixin):
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(150), unique=True)
     password = db.Column(db.String(150))
     userName = db.Column(db.String(150))
-    bookings = db.relationship('Booking')
-    # in relationship() reference the child
+    computer_bookings = db.relationship('ComputerBooking', backref='user', lazy=True)
+    printer_bookings = db.relationship('PrinterBooking', backref='user', lazy=True)
+    laser_bookings = db.relationship('LaserBooking', backref='user', lazy=True)
+
     def is_active(self):
-        return True  # This user is active
+        return True
 
     def get_id(self):
-        return str(self.id)  # Convert to string as required by Flask-Login
+        return str(self.id)
