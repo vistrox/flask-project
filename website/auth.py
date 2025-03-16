@@ -31,7 +31,7 @@ def logout():
     logout_user()
     return redirect(url_for('auth.login'))  
 
-@auth.route('/sign-up', methods=['GET', 'POST'])
+@auth.route('/sign_up', methods=['GET', 'POST'])
 def sign_up():
     
     if current_user.is_authenticated:
