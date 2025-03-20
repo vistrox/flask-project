@@ -18,12 +18,16 @@
    --white: #ffffff;  
    --black: #000000;
    --dark-red: #bd300d;
+   /* --selected: #bd300d; */
    --light-red: #C74749;
    --footer-color: #191a23;
    --booking-hover: #1770ed;
    --max-width: 3200px; 
+   /* --min-width: 1440px; */
+   /* --available: #17ed29; */
    --room-color:#D9D9D9;
    --selectbox-color: #797b7f;
+
 }
 
 *{
@@ -34,15 +38,15 @@
 
 .btn{ /*log out button*/
    padding: 0.75rem 1.5rem;
-   outline: none;
-   border: none;
+   outline: none; /*เอาเส้นขอบออก เวลาคลิก*/
+   border: none; /*ไม่มีขอบ (border) ให้ปุ่มดูเรียบง่าย*/
    font-size: 1.5rem;
    font-weight: 500;
    color: var(--white);
    background-color: var(--dark-red);
    border-radius: 10px;
-   cursor: pointer;
-   transition: 0.3s;
+   cursor: pointer; /*เปลี่ยนเมาส์เป็นรูปมือ เวลาชี้ที่ปุ่ม*/
+   transition: 0.3;
    font-family: "Tilt Warp", serif;
 }
 
@@ -60,35 +64,32 @@ a {
 }
 
 .logo {
+  /* max-width: 120px; */
   font-family: "Tac One", serif;
-  font-size: clamp(40px, 5vw, 90px); /* Responsive font size */
-  margin-left: clamp(20px, 5vw, 90px); /* Responsive margin */
+  font-size: 90px;
+  margin-left: 90px; /* ขยับโลโก้ออกห่างจากขอบซ้าย */
   color: #000000;
   position: relative;
-  padding-top: 50px;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
+  top: 50px;
 }
-
 .logo img {
-  width: 80px;
-  height: auto;
-  margin-left: 20px;
-  vertical-align: middle;
+  width: 60%; /* ปรับขนาดกว้าง */
+  height: auto; /* ให้สัดส่วนคงที่ */
+  margin-left: 120%; /* เว้นระยะห่างจากข้อความ */
+  vertical-align: middle; /* จัดให้อยู่ตรงกลางข้อความ */
+  margin-top: -50%;
 }
 
 .booking-computer{
   font-family: "Tilt Warp", serif;
   color: var(--white);   
-  font-size: clamp(20px, 3vw, 45px); /* Responsive font size */
+  font-size: 45px;       
 }
 
 html,
 body {
   scroll-behavior: smooth;
   background-color: #083877;
-  overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 body {
@@ -100,11 +101,13 @@ body {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
-  width: 100%;
 }
 
 nav {
   background-color: var(--white);
+  /* position: fixed; */
+  /* isolation: isolate; */
+  top: 0;
   width: 100%;
   max-width: var(--max-width);
   margin: auto; 
@@ -112,225 +115,142 @@ nav {
 }
 
 .nav__bar {
-  padding: 1rem 5%;
+  padding: 1rem 40px; /* เพิ่ม padding ซ้าย-ขวา */
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
   background-color: var(--white);
-  flex-wrap: wrap;
 } 
+
 
 .nav__menu__btn {
   font-size: 1.5rem;
   color: var(--white);
   cursor: pointer;
+
 }
 
 .nav__btn {
+  margin-left: 90%;
   position: relative; 
-  margin: 0 5% 20px auto;
-  display: block;
+  top: -100px;
+ 
 }
 
+
 .main {
-    min-height: 100vh;
+    height: 100vh;
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: left;
+    margin-left: 4rem;
+    flex-wrap: wrap; /* ให้จัดเรียงใหม่เมื่อจอเล็ก */
     gap: 20px;
     padding: 20px;
-    width: 100%;
 }
 
 .computers {
-    width: 90%;
-    max-width: 1200px;
+    width: 50%;
+    height: 80%;
     border-radius: 8px;
     padding: 16px;
     background: var(--white);
     box-shadow: 0px 25px 50px -12px rgba(0, 0, 0, 0.25);
-    margin: 2rem auto;
+    margin-left: 7rem;
+    max-width:var(--max-width);
 }
 
-.com-selector {
-    background: var(--room-color);
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 16px;
-    border-radius: 8px;
-    width: 100%;
-    height: 100%;
-    position: relative;
-}
-
-.title{
-  margin-top: 2rem;
-  font-size: clamp(24px, 4vw, 45px);
-  color: var(--black);
-  text-align: center;
-}
-
-.seats{
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  position: relative;
-  margin-bottom: 2rem;
-}
-
-.status {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 2rem 0;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.item {
-    font-size: clamp(18px, 3vw, 35px);
-    position: relative;
-    color: var(--black);
-    padding-left: 60px;
-    margin: 10px;
-}
-
-.item::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    transform: translate(0, -50%);
-    width: 40px;
-    height: 40px;
-    background: rgb(255, 255, 255);
-    outline: 1px solid rgb(120, 120, 120);
-    border-radius: 10px;
-}
-
-.item:nth-child(2)::before {
-    background: rgb(180, 180, 180);
-    outline: 1px solid rgb(120, 120, 120);
-}
-
-.item:nth-child(3)::before {
-    background: #47a3ff; 
-    outline: 1px solid rgb(120, 120, 120);
-}
-
-.all-seats {
+.map-seats {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 20px;
-    margin: 2rem auto;
-    color: var(--dark-red);
-    width: 90%;
-    max-width: 800px;
-    justify-items: center;
-    font-size: clamp(24px, 3vw, 40px);
-    text-align: center;
-} 
-
-.seat {
-    width: clamp(50px, 6vw, 80px);
-    height: clamp(50px, 6vw, 80px); 
-    background: white;
-    border-radius: 10px;
-    outline: 1px solid rgb(180, 180, 180);
-    cursor: pointer;
-    box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.3);
+    width: 50%;
+    gap: 10px;
+    margin-top: 20px;
 }
-
-.all-seats input:checked+label {
-    background: #47a3ff; 
-    outline: none;
-}
-
-.seat.booked {
-  background: rgb(180, 180, 180);
-  outline: none;
-}
-
-.seat.selected {
-  background-color: #d3d3d3 !important;
-  pointer-events: none;
-}
-
-.seat:hover {
-  background-color: #47a3ff;
-}
-
-input {
-    display: none;
-}
-
-.seats::before { /* door */
-    content: "";
-    position: absolute;
-    bottom: 20%;
-    left: 0;
-    width: 15px;
-    height: 200px;
-    background: var(--white);
-    border-radius: 0 0 3px 3px;
-}
-
-/* User input section */
+/*user input*/
+/*rectangle-164*/ 
 .frame{ 
-  font-size: clamp(20px, 3vw, 35px);
+  font-size: 35px;
   background: #ffffff;
   border-radius: 30px;
-  width: 90%;
-  max-width: 500px;
+  width: 30%;
+  height: 60%;
+  max-width: 700px; /* กำหนดขนาดสูงสุด 500px */
+  min-width: 300px; /* กำหนดขนาดต่ำสุด */
   display: flex;
   flex-direction: column;
-  position: relative;
-  margin: 2rem auto;
-  padding: 2rem;
+  flex-wrap: wrap;
+  position: absolute;
+  right: 5%; /* ใช้ right แทน left */
+  /* left: 1300px; */
+  top: 75%;
+  margin-left: 25rem;
+  padding: 4.5rem;
+  transform: translateY(-50%); /* ให้ตำแหน่งอยู่ตรงกลางแนวตั้ง */
   box-shadow: 0px 4px 10px 0px rgba(0, 0, 0, 0.1);
 } 
 
-.userInput {
-  width: 100%;
-  display: flex;
-  justify-content: center;
+
+@media (max-width: 768px) {
+    .all-seats {
+        grid-template-columns: repeat(auto-fit, minmax(50px, 1fr)); /* ปรับที่นั่งให้เล็กลง */
+    }
+    .seat {
+        width: 50px;
+        height: 50px;
+    }
+    .logo {
+        font-size: 50px; /* ลดขนาดโลโก้ */
+        margin-left: 10px; /* ลดระยะห่าง */
+    }
+    .nav__btn {
+        margin-left: 80%;
+    }
+}
+@media (max-width: 1024px) {
+  .frame {
+    width: 40%;
+    right: 2%;
+    padding: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .frame {
+    width: 60%;
+    height: auto;
+    padding: 1.5rem;
+    position: static; /* เอา absolute ออกให้เลื่อนไปตาม flow ปกติ */
+    transform: none; /* ป้องกันการตกขอบ */
+    margin: 20px auto; /* จัดให้อยู่กลาง */
+  }
 }
 
 .underline-bg {
-  background-image: linear-gradient(to right, var(--black), transparent 100%);
+  background-image: linear-gradient(to right,var(--black), transparent 100%);
   background-size: 200% 3px;
   background-repeat: no-repeat;
   background-position: bottom;
   padding-bottom: 3px;
-  margin-bottom: 1.5rem;
-  font-weight: bold;
 }
-
 .no {
-  margin-bottom: 1.5rem;
+  position: relative;
+  top:2rem;
 }
-
 .box-select-com {
   color: var(--selectbox-color);
-  font-size: clamp(16px, 2vw, 20px);
-  padding: 5px;
-  width: 100%;
+  font-size: 20px; /* ปรับขนาดตัวอักษร */
+  padding: 5px; /* ปรับขนาด padding */
+  width: 500px; /* ปรับขนาดความกว้าง */
   height: 60px;
   transition: 0.5s;
   cursor: pointer;
-  margin-top: 0.5rem;
 }
 
 .Date{
   color: var(--black);  
-  font-family: "Tilt Warp", serif;
-  margin-bottom: 0.5rem;        
+  font-family: "Tilt Warp", serif; 
+  margin-top: 4rem;        
 }
 
 .boxDate {
@@ -339,121 +259,95 @@ input {
   padding: 20px;
   display: flex;
   flex-direction: row;
-  width: 100%;
-  font-size: clamp(16px, 2vw, 20px);
+  margin-top:1rem;
+  width:500px;
+  font-size: 20px;
   transition: 0.5s;
   cursor: pointer;
-  margin-bottom: 1.5rem;
 }
 
-.time-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  width: 100%;
-  margin-bottom: 1.5rem;
-}
 
-.time-section {
-  flex: 1;
-  min-width: 200px;
-}
-
-.time-start2, .time-end2 {
+.time-start2 {
   color: var(--black);
+  text-align: left;
   font-family: "Tilt Warp", serif;
-  font-size: clamp(18px, 2vw, 32px);
-  margin-bottom: 0.5rem;
+  font-size: 32px;
+  margin-top: 3rem;
+ 
+}
+.box-time-start {
+  background:var(--dark-5-border, #f4f4f5) ;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 180px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px;
+  height: 30px;
+  position: absolute;
+  /* top: 600px; */
+  font-size: 20px;
+  max-width: 200px;
 }
 
-.box-time-start, .box-time-end {
+.time-end2 {
+  color: var(--black);
+  text-align: left;
+  font-family: "Tilt Warp", serif;
+  font-size: 32px;
+  margin-top: -2.6rem;
+  text-align: left;
+  font-weight: 400;
+  position: absolute;
+  left: 400px;
+ 
+}
+.box-time-end {
   background: var(--dark-5-border, #f4f4f5);
   border-radius: 10px;
   padding: 20px;
-  width: 100%;
-  font-size: clamp(16px, 2vw, 20px);
+  display: flex;
+  flex-direction: row;
+  gap: 180px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 200px;
+  height: 30px;
+  position: absolute;
+  left: 400px;
+  /* top: 609px; */
+  font-size: 20px;
+  max-width: 200px;
 }
 
 .button-confirm {
   background: var(--booking-hover);
   border-radius: 30px;
+  /* padding: 14px 80px 14px 80px; */
   display: flex;
+  flex-direction: row;
+  gap: 10px;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  width: 70%;
   height: 70px;
-  margin: 1.5rem 0 0.5rem 0;
-  transition: 0.3s;
+  position: absolute;
+  margin-top: 35rem;
+  margin-left: 1rem;
+  /* left: 955px;
+  top: 687px;  */
 }
-
 .confirm {
-  color: var(--white);
+  color: var(--white, #ffffff);
   text-align: center;
   font-family: "Tilt Warp", serif;
-  font-size: clamp(18px, 2vw, 30px);
-  border: none;
-  background: transparent;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
+  font-size: 30px;
+  position: relative;
 }
-
 .button-confirm:hover{
   background-color: var(--bg-clor);
-}
-
-/* Responsive adjustments */
-@media (max-width: 992px) {
-  .all-seats {
-    grid-template-columns: repeat(3, 1fr);
-  }
-  
-  .nav__btn {
-    margin: 0 5% 10px auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .all-seats {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 15px;
-  }
-  
-  .logo .lab-manager {
-    font-size: 40px;
-  }
-  
-  .nav__btn {
-    margin-top: -80px;
-  }
-  
-  .seats::before {
-    height: 150px;
-  }
-}
-
-@media (max-width: 576px) {
-  .all-seats {
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 10px;
-  }
-  
-  .seat {
-    width: 40px;
-    height: 40px;
-  }
-  
-  .item {
-    padding-left: 40px;
-    font-size: 16px;
-  }
-  
-  .item::before {
-    width: 30px;
-    height: 30px;
-  }
-  
-  .frame {
-    padding: 1.5rem;
-  }
+  cursor: pointer; /*เปลี่ยนเมาส์เป็นรูปมือ เวลาชี้ที่ปุ่ม*/
+  transition: 0.3;
 }
