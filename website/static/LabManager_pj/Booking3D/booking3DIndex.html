@@ -1,87 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Metadata for the document, including charset, viewport settings, and external stylesheets -->
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- Link to external stylesheets -->
-    <link rel="stylesheet" href="./vars.css" />
-    <link rel="stylesheet" href="./style3D.css" />
 
-    <!-- Internal CSS reset to ensure consistent styling -->
-    <style>
-         @import url('https://fonts.googleapis.com/css2?family=Tac+One&display=swap'); 
-         @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
-      a,
-      button,
-      input,
-      select,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        border: none;
-        text-decoration: none;
-        background: none;
-        -webkit-font-smoothing: antialiased;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-      menu,
-      ol,
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
+  <link rel="stylesheet" href="style3D.css" />
+  <script src="script.js" defer></script>
+</head>
 
-    <!-- Page Title -->
-    <title>Document</title>
-  </head>
+<body>
+  <!-- แถบ bar-->
+  <header class="header">
+    <nav>
+      <div class="nav__bar">
+        <div class="logo">
+          <div class="lab-manager">Lab Manager</div>
+          <span class="btn booking-3d">: Booking 3D Printer</span>
+          <img src="./img/icon3D.png" alt="booking3D">
+        </div>
+      </div>
+      <a href="homeIndex.html" class="btn nav__btn">HOME</a>
+    </nav>
+  </header>
+
+  <!-- ข้อมูลอุปกรณ์ -->
+
   <body>
-    <!-- Main container for the booking page with a background image -->
-    <div
-      class="booking-3-d"
-      style="
-        background: url(booking-3-d.png) center;
-        background-size: cover;
-        background-repeat: no-repeat;
-      "
-    >
-      <!-- Booking section -->
-      <div class="booking">
-        <!-- Rec booking section (likely for a rectangle or container) -->
-        <div class="rec-booking"></div>
+    <div class="main">
+      <div class="infoS1">
+        <img src="./img/infoS1.PNG" alt="info-S1">
+      </div>
+      <div class="infoK1">
+        <img src="./img/infoK1.PNG" alt="info-K1">
+      </div>
+    </div>
 
-        <!-- Booking text label -->
-        <div class="booking2">Booking</div>
-
+    <div class="userInput">
+      <div class="frame">
+        <p class="underline-bg">Booking</p>
 
         <!-- Equipments section -->
         <div class="equipments">
-          <div class="equipments2">Equipments</div>
-          
-          <!-- Dropdown for equipment selection -->
+          <p>Equipments</p>
           <select class="typebox-3d-select">
             <option value="" disabled selected>Select 3D Printer</option>
             <option value="Ender-3 S1 Pro">Ender-3 S1 Pro</option>
             <option value="K1">K1</option>
           </select>
         </div>
-
-        <!-- Dropdown for NO. of Equipments-->
+        <!-- Computer Selection -->
         <div class="no-3-d">
-          <div class="no">NO.</div>
-
-          <select class="box-no">
-            <option value="" disabled selected>Select NO.</option>
+          <p>No.</p>
+          <select id="3d-select" class="box-no">
+            <option value="" disabled selected>Select No.</option>
             <option value="1">1</option>
             <option value="2">2</option>
             <option value="3">3</option>
@@ -92,161 +67,74 @@
             <option value="8">8</option>
             <option value="9">9</option>
             <option value="10">10</option>
+
           </select>
-        </div>
+        </div> <!-- no -->
 
         <!-- Date Selection -->
-        <div class="date-3-d">
-          <div class="date">Date</div>
-          <input type="date" id="booking-date" class="box-date" />
+        <div class="date2">
+          <p class="Date">Date</p>
+          <input type="date" id="booking-date" class="boxDate" />
         </div>
 
         <!-- Time Start -->
-        <div class="time-start-3-d">
-          <div class="time-start">Time Start</div>
+        <div class="time-start">
+          <p class="time-start2">Time Start</p>
           <input type="time" id="time-start" class="box-time-start" />
         </div>
 
         <!-- Time End -->
-        <div class="time-end-3-d">
-          <div class="time-end2">Time End</div>
+        <div class="time-end">
+          <p class="time-end2">Time End</p>
           <input type="time" id="time-end" class="box-time-end" />
         </div>
 
         <!-- Confirm Button -->
-        <div class="frame-23" onclick="confirmBooking()">
-            <div class="confirm">Confirm</div>
-          </div>
+        <div class="button-confirm" onclick="confirmBooking()">
+          <div class="confirm">Confirm</div>
         </div>
-    </div>
-        <script>
-        function confirmBooking() {
-            let type3D = document.querySelector(".typebox-3d-select").value;
-            let no = document.querySelector(".box-no").value;
-            let date = document.getElementById("booking-date").value;
-            let timeStart = document.getElementById("time-start").value;
-            let timeEnd = document.getElementById("time-end").value;
-        
-            if (!type3D || !no || !date || !timeStart || !timeEnd) {
-                alert("Please fill in all fields before confirming.");
-                return;
-            }
-        
-            let message = `✅ Booking Confirmed!\n\n📌 3D Printer: ${type3D}\n🔢 NO.: ${no}\n📅 Date: ${date}\n⏰ Time: ${timeStart} - ${timeEnd}`;
-            alert(message);
-        }
-    </script>
-
-    
-
-    <!-- Horizontal line (possibly for styling or separation) -->
-    <div class="booking-line"></div>
 
 
-    <!-- Bar section (potentially used for styling or layout) -->
-    <div class="bar"></div>
 
-    <!-- Lab Manager labels -->
-    <div class="lab-manager">Lab Manager</div>
-
-    <!-- 3D Printer icons/images -->
-    <img class="icon-3-d" src="icon3D.png" />
-
-    <!-- Additional equipment details for "Creality Ender-3 S1 Pro" -->
-    <div class="rec-s-1"></div>
-    <div class="equipments-creality-ender-3-s-1-pro">
-      <span>
-        <span class="equipments-creality-ender-3-s-1-pro-span">
-          Equipments:
-        </span>
-        <span class="equipments-creality-ender-3-s-1-pro-span2">
-          Creality Ender-3 S1 Pro
-          <br />
-        </span>
-        <!-- Equipment amount -->
-        <span class="equipments-creality-ender-3-s-1-pro-span3">
-          <br />
-          Amount:
-        </span>
-        <span class="equipments-creality-ender-3-s-1-pro-span4">
-          8
-          <br />
-        </span>
-        <!-- Equipment highlight features -->
-        <span class="equipments-creality-ender-3-s-1-pro-span5">
-          <br />
-          Highlight:
-          <br />
-        </span>
-        <ul class="equipments-creality-ender-3-s-1-pro-span6">
-          <li>Printing size: 220x220x270mm</li>
-          <li>Machine Dimension: 490x455x625 mm</li>
-          <li>Printing Speed: ≤160 mm/s</li>
-          <li>Nozzle Diameter: 0.4 mm</li>
-          <li>Filament Diameter: 1.75 mm</li>
-          <li>File Transfer: Type-C USB/SD card</li>
-          <li>3D File Format: .stl/.bj/.gcode</li>
-        </ul>
-      </span>
+      </div> <!-- frame -->
     </div>
 
-    <!-- Additional equipment section for "Creality K1" -->
-    <div class="rec-k-1"></div>
-    <div class="equipments-creality-k-1">
-      <span>
-        <span class="equipments-creality-k-1-span">
-          Equipments:
-        </span>
-        <span class="equipments-creality-k-1-span2">
-          Creality K1
-          <br />
-        </span>
-        <!-- Equipment amount -->
-        <span class="equipments-creality-k-1-span3">
-          <br />
-          Amount:
-        </span>
-        <span class="equipments-creality-k-1-span4">
-          10
-          <br />
-        </span>
-        <!-- Equipment highlight features -->
-        <span class="equipments-creality-k-1-span5">
-          <br />
-          Highlight:
-          <br />
-        </span>
-        <ul class="equipments-creality-k-1-span6">
-          <li>Printing size: 220x220x250mm</li>
-          <li>Machine Dimension: 355x355x480 mm</li>
-          <li>Printing Speed: ≤600 mm/s</li>
-          <li>Nozzle Diameter: 0.4 mm</li>
-          <li>Filament Diameter: 1.75 mm</li>
-          <li>File Transfer: USB drive/WiFi</li>
-          <li>3D File Format: .gcode</li>
-        </ul>
-      </span>
     </div>
+  </body>
 
-    <!-- 3D printer images -->
-    <img class="_3-d-printer-im-1" src="3dPrinter_IM.png" />
-    <img class="_3-d-printer-1" src="3DPrinter.png" />
-  </div>
+  <!-- <body>
+       <div class="userInput">
+               <div class="frame">
+                   <p>Booking</p>
+               </div>
 
-  <!-- Navigation buttons and labels -->
-  <div class="home">HOME</div>
-      <a href="../Home/homeIndex.html" class="home">HOME</a>
-      
-      <a href="../Home/homeIndex.html">
-        <img class="icon-back-1" src="iconBack.png" alt="arrow-back" />
-      </a>
-      <!-- Navigation Icons -->
-      <img class="icon-date" src="iconDate.png" />
-  <div class="heading">
-    <div class="label">
-      <div class="label2">Booking 3D Printer</div>
-    </div>
-</div>
+       </div>
+    </body> -->
+
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    function confirmBooking() {
+      let type3D = document.querySelector(".typebox-3d-select").value;
+      let no = document.querySelector(".box-no").value;
+      let date = document.getElementById("booking-date").value;
+      let timeStart = document.getElementById("time-start").value;
+      let timeEnd = document.getElementById("time-end").value;
+
+      if (!type3D || !no || !date || !timeStart || !timeEnd) {
+        alert("Please fill in all fields before confirming.");
+        return;
+      }
+
+      let message = `✅ Booking Confirmed!\n\n📌 3D Printer: ${type3D}\n🔢 NO.: ${no}\n📅 Date: ${date}\n⏰ Time: ${timeStart} - ${timeEnd}`;
+      alert(message);
+    }
+  </script>
+
+
 </body>
-</html>
 
+</html>

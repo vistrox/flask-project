@@ -1,416 +1,5 @@
-.home-page,
-.home-page * {
-  box-sizing: border-box;
-}
-.home-page {
-  background: linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    linear-gradient(to left, rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)),
-    linear-gradient(to left, #106ee9, #106ee9);
-  height: 2054px;
-  position: relative;
-  overflow: hidden;
-}
-.maker-space {
-  border-radius: 10px;
-  width: 1250px;
-  height: 619px;
-  position: absolute;
-  left: 95px;
-  top: 220px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  object-fit: cover;
-}
-.button-com {
-  border-radius: 0px;
-  width: 373px;
-  height: 500px;
-  position: absolute;
-  left: 102px;
-  top: 971px;
-  overflow: visible;
-}
-.button-3-d {
-  border-radius: 0px;
-  width: 373px;
-  height: 500px;
-  position: absolute;
-  left: 537px;
-  top: 971px;
-  overflow: visible;
-}
-.button-laser {
-  border-radius: 0px;
-  width: 373px;
-  height: 500px;
-  position: absolute;
-  left: 972px;
-  top: 971px;
-  overflow: visible;
-}
-.rectangle-1 {
-  background: #ffffff;
-  width: 1440px;
-  height: 198px;
-  position: absolute;
-  left: 0px;
-  top: -23px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.rectangle-5 {
-  background: #ffffff;
-  width: 1440px;
-  height: 198px;
-  position: absolute;
-  left: 0px;
-  top: -23px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-}
-.button-logout {
-  background: #bd300d;
-  border-radius: 15px;
-  width: 136px;
-  height: 48px;
-  position: absolute;
-  left: 1223px;
-  top: 63px;
-}
-.log-out {
-  color: #ffffff;
-  text-align: left;
-  /* font-family: "TiltWarp-Regular", sans-serif; */
-  font-family: "Tilt Warp", serif;
-  font-size: 20px;
-  font-weight: 400;
-  position: absolute;
-  left: 1255px;
-  top: 73px;
-}
-.my-profile {
-  color: #000000;
-  text-align: left;
-  /* font-family: "TiltWarp-Regular", sans-serif; */
-  font-family: "Tilt Warp", serif;
-  font-size: 20px;
-  font-weight: 400;
-  position: absolute;
-  left: 918px;
-  top: 76px;
-}
-.lab-manager {
-  color: #000000;
-  text-align: left;
-  /* font-family: "TacOne-Regular", sans-serif; */
-  font-family: "Tac One", serif;
-  font-size: 70px;
-  font-weight: 400;
-  position: absolute;
-  left: 99px;
-  top: 47px;
-  width: 421px;
-  height: 45px;
-}
-.help-support {
-  color: #000000;
-  text-align: left;
-  /* font-family: "TiltWarp-Regular", sans-serif; */
-  font-family: "Tilt Warp", serif;
-  font-size: 20px;
-  font-weight: 400;
-  position: absolute;
-  left: 720px;
-  top: 76px;
-}
-.booking-laser-cutter {
-  color: #000000;
-  text-align: center;
-  /* font-family: "TiltWarp-Regular", sans-serif; */
-  font-family: "Tilt Warp", serif;
-  font-size: 32px;
-  font-weight: 400;
-  position: absolute;
-  left: 1034px;
-  top: 1308px;
-  width: 249px;
-  height: 37px;
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
-}
-.line-3 {
-  margin-top: -1px;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.15);
-  border-width: 1px 0 0 0;
-  width: 80px;
-  height: 0px;
-  position: absolute;
-  left: 945px;
-  top: 759px;
-  transform-origin: 0 0;
-  transform: rotate(90deg) scale(1, 1);
-}
-.booking-3-d-printer {
-  color: #000000;
-  text-align: center;
-  /* font-family: "TiltWarp-Regular", sans-serif; */
-  font-family: "Tilt Warp", serif;
-  font-size: 32px;
-  font-weight: 400;
-  position: absolute;
-  left: 609px;
-  top: 1308px;
-  width: 229px;
-  height: 37px;
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
-}
-.line-2 {
-  background: #000000;
-  margin-top: -1px;
-  border-style: solid;
-  border-color: rgba(0, 0, 0, 0.15);
-  border-width: 1px 0 0 0;
-  width: 80px;
-  height: 0px;
-  position: absolute;
-  left: 743px;
-  top: 760px;
-  transform-origin: 0 0;
-  transform: rotate(90deg) scale(1, 1);
-}
-.frame-2 {
-  background: #eeeeee;
-  border-radius: 10px;
-  width: 343px;
-  height: 75px;
-  position: absolute;
-  left: 177px;
-  top: 2398px;
-  box-shadow: var(
-    --m3-elevation-light-3-box-shadow,
-    0px 1px 3px 0px rgba(0, 0, 0, 0.3),
-    0px 4px 8px 3px rgba(0, 0, 0, 0.15)
-  );
-  overflow: hidden;
-}
-
-.help {
-  color: #000000;
-  text-align: left;
-  /* font-family: "ABeeZee-Regular", sans-serif; */
-  font-family: "Tilt Warp", serif;
-  font-size: 20px;
-  font-weight: 400;
-  position: absolute;
-  left: 1203px;
-  top: 2743px;
-  width: 304px;
-  height: 48px;
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.4);
-}
-.faq-customer-support-how-to-guide-contact-us-24-7 {
-  color: #000000;
-  text-align: left;
-  /* font-family: "ABeeZee-Regular", sans-serif; */
-  font-family: "Tilt Warp", serif;
-  font-size: 16px;
-  font-weight: 400;
-  position: absolute;
-  left: 1203px;
-  top: 2791px;
-  width: 304px;
-  height: 48px;
-}
-.frame-24 {
-  width: 100px;
-  height: 100px;
-  position: absolute;
-  left: 686px;
-  top: 2837px;
-  overflow: hidden;
-}
-.footer {
-  background: var(--dark, #191a23);
-  border-radius: 45px 45px 0px 0px;
-  padding: 55px 60px 50px 60px;
-  display: flex;
-  flex-direction: column;
-  gap: 50px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  position: absolute;
-  left: 100px;
-  top: 1652px;
-}
-.lab-manager2 {
-  color: #ffffff;
-  text-align: left;
-  /* font-family: "TacOne-Regular", sans-serif; */
-  font-family: "Tac One", serif;
-  font-size: 64px;
-  font-weight: 400;
-  position: relative;
-  width: 421px;
-  height: 45px;
-}
-.navigation-and-contacts {
-  font-family: "Tilt Warp", serif;
-  color: #ffffff;
-  display: flex;
-  flex-direction: column;
-  gap: 66px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  height: 304px;
-  position: relative;
-}
-.frame-26 {
-  display: flex;
-  flex-direction: row;
-  gap: 154px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-.contact-us {
-  display: flex;
-  flex-direction: column;
-  gap: 27px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-.heading {
-  display: flex;
-  flex-direction: column;
-  gap: 0px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-.label {
-  background: #bd300d;
-  border-radius: 7px;
-  padding: 0px 7px 0px 7px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-.label2 {
-  color: #000000;
-  text-align: left;
-  /* font-family: var(--h4-font-family, "SpaceGrotesk-Medium", sans-serif); */
-  font-family: "Tilt Warp", serif;
-  font-size: var(--h4-font-size, 20px);
-  font-weight: var(--h4-font-weight, 500);
-  position: relative;
-}
-.info {
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-  align-items: flex-start;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  position: relative;
-}
-.email-wanrapee-c-kkumail-com {
-  color: #ffffff;
-  text-align: left;
-  /* font-family: "TiltWarp-Regular", sans-serif; */
-  font-family: "Tilt Warp", serif;
-  font-size: 18px;
-  font-weight: 400;
-  position: relative;
-}
-.phone-555-555-5555 {
-  color: #ffffff;
-  text-align: left;
-  /* font-family: "TiltWarp-Regular", sans-serif; */
-  font-family: "Tilt Warp", serif;
-  font-size: 18px;
-  font-weight: 400;
-  position: relative;
-}
-.address-faculty-of-engineering-khon-kaen-university {
-  color: #ffffff;
-  text-align: left;
-  /* font-family: "TiltWarp-Regular", sans-serif; */
-  font-family: "Tilt Warp", serif;
-  font-size: 18px;
-  font-weight: 400;
-  position: relative;
-}
-.elements {
-  display: flex;
-  flex-direction: row;
-  gap: 155px;
-  align-items: center;
-  justify-content: flex-start;
-  flex-shrink: 0;
-  width: 1121px;
-  height: 29px;
-  position: relative;
-}
-.icon-com {
-  border-radius: 50px;
-  width: 300px;
-  height: 300px;
-  position: absolute;
-  left: 143px;
-  top: 993px;
-  object-fit: cover;
-}
-.icon-3-d {
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  left: 599px;
-  top: 1006px;
-  object-fit: cover;
-}
-.icon-laser {
-  width: 250px;
-  height: 250px;
-  position: absolute;
-  left: 1034px;
-  top: 1006px;
-  object-fit: cover;
-}
-.booking-computer {
-  color: #2c2c2c;
-  text-align: center;
-  /* font-family: "TiltWarp-Regular", sans-serif; */
-  font-family: "Tilt Warp", serif;
-  font-size: 32px;
-  font-weight: 400;
-  position: absolute;
-  left: 168px;
-  top: 1314px;
-  width: 251px;
-  height: 75px;
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
-}
-.let-s-book {
-  color: #ffffff;
-  text-align: center;
-  /* font-family: "TiltWarp-Regular", sans-serif; */
-  font-family: "Tilt Warp", serif;
-  font-size: 45px;
-  font-weight: 400;
-  position: absolute;
-  left: 95px;
-  top: 896px;
-  width: 251px;
-  height: 75px;
-  -webkit-text-stroke: 1px rgba(0, 0, 0, 0.3);
-}
+@import url('https://fonts.googleapis.com/css2?family=Tac+One&display=swap'); 
+@import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
 
 .tac-one-regular {
   font-family: "Tac One", serif;
@@ -424,4 +13,295 @@
   font-style: normal;
 }
 
+:root{
+   --bg-clor: #083877;
+   --white: #ffffff;  
+   --black: #000000;
+   --dark-red: #bd300d;
+   --light-red: #C74749;
+   --footer-color: #191a23;
+   --booking-hover: #1770ed;
+   --max-width: 3200px; 
+
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.btn{ /*log out button*/
+   padding: 0.75rem 1.5rem;
+   outline: none; /*เอาเส้นขอบออก เวลาคลิก*/
+   border: none; /*ไม่มีขอบ (border) ให้ปุ่มดูเรียบง่าย*/
+   font-size: 1.5rem;
+   font-weight: 500;
+   color: var(--white);
+   background-color: var(--dark-red);
+   border-radius: 10px;
+   cursor: pointer; /*เปลี่ยนเมาส์เป็นรูปมือ เวลาชี้ที่ปุ่ม*/
+   transition: 0.3;
+   font-family: "Tilt Warp", serif;
+}
+
+.btn:hover {
+  background-color: var(--light-red);
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+.logo {
+  /* max-width: 120px; */
+  font-family: "Tac One", serif;
+  font-size: 75px;
+  margin-left: 90px; /* ขยับโลโก้ออกห่างจากขอบซ้าย */
+  color: #000000;
+}
+
+html,
+body {
+  scroll-behavior: smooth;
+  background-color: #083877;
+}
+
+body {
+  font-family: "Tilt Warp", serif;
+}
+
+.header { 
+  background-color: var(--white);
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+nav {
+  background-color: var(--white);
+  /* position: fixed; */
+  /* isolation: isolate; */
+  top: 0;
+  width: 100%;
+  max-width: var(--max-width);
+  margin: auto; 
+  z-index: 9;
+}
+
+.nav__bar {
+  padding: 1rem 40px; /* เพิ่ม padding ซ้าย-ขวา */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  background-color: var(--white);
+} 
+
+
+.nav__menu__btn {
+  font-size: 1.5rem;
+  color: var(--white);
+  cursor: pointer;
+
+}
+
+.nav__links {
+  list-style: none; /*ลบจุดหน้ารายการเมนู*/
+  position: absolute;
+  width: 100%;
+  padding: 2rem;
+  display: flex; /*ใช้ Flexbox เพื่อจัดเรียงไอเท็มเมนู*/
+  align-items: center; /*จัดให้อยู่ตรงกลางในแนวแกน X*/
+  flex-direction: column; /* ให้รายการเมนูเรียงแนวตั้ง (จากบนลงล่าง)*/
+  gap: 2rem; /*กำหนดระยะห่างระหว่างไอเท็มเมนู 2rem*/
+  background-color: rgba(76, 69, 72, 0.9);
+  transform: translateY(-100%);
+  transition: 0.5s;
+  z-index: 10;
+}
+
+.nav__links.open {
+  transform: translateY(0);
+}
+
+.nav__links a {
+  position: relative;
+  isolation: isolate;
+  padding-bottom: 8px;
+  color: var(--black);
+  transition: 0.3s;
+}
+
+.nav__btn {
+  display: none;
+  margin-right: 90px; /* ขยับปุ่ม Logout ออกห่างจากขอบขวา */
+}
+
+.image-container {
+   display: flex;
+   flex-direction: column; /* จัดให้อยู่แนวตั้ง */
+   align-items: center; /* จัดให้อยู่ตรงกลาง */
+   gap: 2rem; /* เว้นระยะห่างระหว่างรูปและปุ่ม */
+   padding: 4rem 0;
+}
+
+.MakerSpace-img {
+   width: 85%;
+   display: block;
+   margin: auto;
+   padding: 0; /* เอา padding 4rem ออกเพื่อไม่ให้เกิดช่องว่าง */
+}
+
+/*booking button*/
+.row {
+--bs-gutter-x: 2.5rem;
+--bs-gutter-y: 0;
+display: flex;
+flex-wrap: wrap;
+margin-top: calc(var(--bs-gutter-y) * -1);
+margin-right: calc(var(--bs-gutter-x) * -.5);
+margin-left: calc(var(--bs-gutter-x) * -.5);
+}
+
+#booking-button {
+   width: 100%;
+   min-height: auto;
+   padding: 2rem 0;
+   text-align: left;
+
+}
+
+.letsbook {
+   color: var(--white);
+   text-align: left;
+   font-size: 45px;
+   margin-bottom: 1rem; /* เว้นช่องว่างระหว่างหัวข้อกับปุ่ม */
+}
+
+/* แก้ไขปุ่ม Booking */
+#booking-button .button {
+  width: 100%; /* ใช้ % เพื่อให้ปรับตามขนาดจอ */
+  max-width: 100%;
+  min-width: 100px;
+  border-radius: 40px;
+  transition: 0.5s;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:var(--white);
+  padding: 40px;
+  flex-direction: column; /* จัดเรียงแนวตั้ง */
+  font-size: 32px;
+  color: var(--black);
+  
+}
+
+#booking-button .button img {
+  width: 100%;
+  height: auto;
+  border-radius: 40px;
+}
+
+#booking-button .button:hover {
+  transform: translateY(-10px);
+  color: var(--booking-hover);
+}
+
+
+/*footer*/
+.footer-frame{
+   background:var(--footer-color);
+   border-top-left-radius: 40px;
+   border-top-right-radius: 40px;
+   width: 70%;
+   position: absolute;
+   justify-content: center;
+   left:15%;
+}
+.logo-footer{
+   color: var(--white);
+   font-family: "Tac One", serif;
+   font-size: 75px;
+   margin-left: 4rem;
+   margin-top: 3rem;
+}
+.contactUs{
+   color: var(--black); 
+   background-color: #bd300d;
+   border-radius: 10px;
+   margin-left: 4rem;
+   margin-bottom: 1rem;
+   padding: 0.5rem;
+}
+.email{
+   color: var(--white); 
+   margin-left: 4rem;
+}
+.phone{
+   color: var(--white);  
+   margin-left: 4rem;           
+}
+.address{
+   color: var(--white); 
+   margin-left: 4rem;
+   margin-bottom: 3rem;
+}
+
+
+
+
+@media (min-width: 768px) {
+  nav {
+    padding: 2rem 1rem;
+    position: static;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .nav__bar {
+    padding: 0;
+    color:var(--white);
+    
+  }
+
+  .nav__menu__btn {
+    display: none;
+  }
+
+  .nav__links {
+    padding: 0;
+    width: unset;
+    position: static;
+    transform: none;
+    flex-direction: row;
+    background-color: transparent;
+  }
+
+  .nav__btn {
+    display: block;
+  }
+
+  .nav__links a::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    bottom: 0;
+    height: 2px;
+    width: 0;
+    background-color: var(--black);
+    transition: 0.3s;
+    transform-origin: left;
+  }
+  .nav__links a:hover::after {
+    width: 100%;
+  }
+}
 

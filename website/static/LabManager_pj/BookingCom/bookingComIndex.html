@@ -2,204 +2,151 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./vars.css" />
-    <link rel="stylesheet" href="./styleCom.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> 
 
-    <style>
-     @import url('https://fonts.googleapis.com/css2?family=Tac+One&display=swap'); 
-     @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
-      /* Global styles */
-      a,
-      button,
-      input,
-      select,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        border: none;
-        text-decoration: none;
-        background: none;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      /* Reset list styles */
-      menu,
-      ol,
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-    <title>Booking Computer</title>
+    <link rel="stylesheet" href="styleCom.css" />
+    <script src="script.js" defer></script>
   </head>
   <body>
-    <!-- Main booking section -->
-    <div class="booking-com">
-      <div class="booking-com-page">
-        <div class="rectangle-164"></div>
-        <div class="booking">Booking</div>
-        
-        <!-- Computer Selection -->
-        <div class="no">
-            <div class="fontNO">NO.</div>
-            <select id="computer-select" class="box-select-com">
-              <option value="" disabled selected>Select Computer</option>
-              <option value="C1">C1</option>
-              <option value="C2">C2</option>
-              <option value="C3">C3</option>
-              <option value="C4">C4</option>
-              <option value="C5">C5</option>
-              <option value="C6">C6</option>
-              <option value="C7">C7</option>
-              <option value="C8">C8</option>
-              <option value="C9">C9</option>
-              <option value="C10">C10</option>
-              <option value="C11">C11</option>
-              <option value="C12">C12</option>
-              
-              <option value="C13">C13</option>
-              <option value="C14">C14</option>
-              <option value="C15">C15</option>
-              <option value="C16">C16</option>
-              <option value="C17">C17</option>
-              <option value="C18">C18</option>
-              <option value="C19">C19</option>
-              <option value="C20">C20</option>
-              <option value="C21">C21</option>
-            </select>
-        </div>
-
-        <!-- Date Selection -->
-        <div class="date2">Date</div>
-        <input type="date" id="booking-date" class="boxDate" />
-
-        <!-- Time Start -->
-        <div class="time-start">
-            <div class="time-start2">Time Start</div>
-            <input type="time" id="time-start" class="box-time-start" />
-          </div>
-  
-          <!-- Time End -->
-          <div class="time-end">
-            <div class="time-end2">Time End</div>
-            <input type="time" id="time-end" class="box-time-end" />
-          </div>
-  
-          <!-- Confirm Button -->
-          <div class="button-confirm" onclick="confirmBooking()">
-            <div class="confirm">Confirm</div>
+    <!-- แถบ bar-->
+    <header class="header">
+      <nav>
+        <div class="nav__bar">
+          <div class="logo">
+               <div class="lab-manager">Lab Manager</div>
+               <span class ="btn booking-computer">: Booking Computer</span>
+               <img src="./img/iconCom.png" alt="bookingCom">
           </div>
         </div>
-    </div>
+        <a href="homeIndex.html" class="btn nav__btn">HOME</a>
+        <!-- <button class="btn nav__btn">HOME</button> -->
+      </nav>
+    </header>
+    
+    <!-- ผังเลือกที่นั่ง -->
+    <body>
+        <div class="main">
+        <div class="computers">
+            <div class="com-selector">
+                <div class="title">Seat number</div>
+                <div class="seats">
+                    <div class="status">
+                        <div class="item">Available</div>
+                        <div class="item">Booked</div>
+                        <div class="item">Selected</div>
 
-      <script>
-        function confirmBooking() {
-          let selectedComputer = document.getElementById("computer-select").value;
-          let selectedDate = document.getElementById("booking-date").value;
-          let timeStart = document.getElementById("time-start").value;
-          let timeEnd = document.getElementById("time-end").value;
+                    </div>
+                    <div class="container">
+                              <div class="all-seats"></div>
+                          </div>
+                     <script src="script.js"></script>
+                      
+                    <!-- <div class="all-seats">
+                        <input type="checkbox" name="computers" id="c1">
+                        <label for="c1" class="seat booked">C1</label> 
+                        <input type="checkbox" name="computers" id="c2" class="seat-checkbox">
+                        <label for="c2" class="seat">C2</label>
+                    </div> -->
+                </div>
+
+                <div class="userInput">
+                   <div class="frame">
+                       <p class="underline-bg">Booking</p>
+                       <!-- Computer Selection -->
+                   <div class="no">
+                              <p>No.</p>
+                                             <select id="computer-select" class="box-select-com">
+                                                            <option value="" disabled selected>Select Computer</option>
+                                                            <option value="C1">C1</option>
+                                                            <option value="C2">C2</option>
+                                                            <option value="C3">C3</option>
+                                                            <option value="C4">C4</option>
+                                                            <option value="C5">C5</option>
+                                                            <option value="C6">C6</option>
+                                                            <option value="C7">C7</option>
+                                                            <option value="C8">C8</option>
+                                                            <option value="C9">C9</option>
+                                                            <option value="C10">C10</option>
+                                                            <option value="C11">C11</option>
+                                                            <option value="C12">C12</option>
+                                                            <option value="C13">C13</option>
+                                                            <option value="C14">C14</option>
+                                                            <option value="C15">C15</option>
+                                                            <option value="C16">C16</option>
+                                                            <option value="C17">C17</option>
+                                                            <option value="C18">C18</option>
+                                                            <option value="C19">C19</option>
+                                                            <option value="C20">C20</option>
+                                                            <option value="C21">C21</option>
+                                             </select>
+                   </div> <!-- no -->
+
+                   <!-- Date Selection -->
+                   <div class="date2">
+                       <p class="Date">Date</p>
+                       <input type="date" id="booking-date" class="boxDate" />
+                   </div>
+
+                   <!-- Time Start -->
+                   <div class="time-start">
+                     <p class="time-start2">Time Start</p>
+                     <input type="time" id="time-start" class="box-time-start" />
+                   </div>
+     
+                   <!-- Time End -->
+                   <div class="time-end">
+                     <p class="time-end2">Time End</p>
+                     <input type="time" id="time-end" class="box-time-end" />
+                   </div>
+
+                    <!-- Confirm Button -->
+                   <div class="button-confirm" onclick="confirmBooking()">
+                      <div class="confirm">Confirm</div>
+                   </div>
+     
   
-          if (!selectedComputer || !selectedDate || !timeStart || !timeEnd) {
-            alert("Please select all required fields!");
-            return;
-          }
+                              
+                  </div> <!-- frame -->
+                   </div>
+                   
+               </div>
+    </body>
+
+    <!-- <body>
+       <div class="userInput">
+               <div class="frame">
+                   <p>Booking</p>
+               </div>
+
+       </div>
+    </body> -->
+
+    <script src="main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    
+    <script>
+         function confirmBooking() {
+           let selectedComputer = document.getElementById("computer-select").value;
+           let selectedDate = document.getElementById("booking-date").value;
+           let timeStart = document.getElementById("time-start").value;
+           let timeEnd = document.getElementById("time-end").value;
   
-          alert(
-            `✅ Booking Confirmed!:\n\n📌 Computer: ${selectedComputer}\n📅 Date: ${selectedDate}\n⏰ Time: ${timeStart} - ${timeEnd}`
-          );
-        }
+           if (!selectedComputer || !selectedDate || !timeStart || !timeEnd) {
+             alert("Please select all required fields!");
+             return;
+           }
+  
+           alert(
+             `✅ Booking Confirmed!:\n\n📌 Computer: ${selectedComputer}\n📅 Date: ${selectedDate}\n⏰ Time: ${timeStart} - ${timeEnd}`
+           );
+         }
       </script>
 
 
-
-        <div class="booking-line"></div>
-        <div class="date2">Date</div>
-        <div class="frame-22"></div>
-        <div class="bar"></div>
-        <div class="lab-manager">Lab Manager</div>
-        <img class="icon-com" src="iconCom.png" />
-        <div class="rec-room"></div>
-        <div class="rec-door"></div>
-        <img class="icon-date" src="iconDate.png" />
-      </div>
-      
-      <!-- Navigation Section -->
-      <div class="home">HOME</div>
-      <a href="../Home/homeIndex.html" class="home">HOME</a>
-      
-      <img class="arrow-back" src="iconBack.png" />
-      <a href="../Home/homeIndex.html">
-        <img class="arrow-back" src="iconBack.png" alt="arrow-back" />
-      </a>
-
-      <div class="heading">
-        <div class="label">
-          <div class="label2">Booking Computer</div>
-        </div>
-      </div>
-
-      <!-- Computer Lab Layout -->
-      <div class="rec-c-9"></div>
-      <div class="rec-c-4"></div>
-      <div class="c-4">C4</div>
-      <div class="rec-c-3"></div>
-      <div class="c-3">C3</div>
-      <div class="rec-c-5"></div>
-      <div class="rec-c-6"></div>
-      <div class="c-5">C5</div>
-      <div class="c-6">C6</div>
-      <div class="rec-c-2"></div>
-      <div class="c-22">C2</div>
-      <div class="rec-c-1"></div>
-      <div class="c-1">C1</div>
-
-      <!-- Door Label -->
-      <div class="d-o-o-r">
-        D<br />
-        o<br />
-        o<br />
-        r
-      </div>
-
-      <!-- Additional Computer Layout -->
-      <div class="rec-c-13"></div>
-      <div class="c-13">C13</div>
-      <div class="rec-c-12"></div>
-      <div class="c-12">C12</div>
-      <div class="rec-c-11"></div>
-      <div class="c-11">C11</div>
-      <div class="rec-c-8"></div>
-      <div class="c-8">C8</div>
-      <div class="rec-c-7"></div>
-      <div class="c-7">C7</div>
-      <div class="rec-c-14"></div>
-      <div class="c-14">C14</div>
-      <div class="rec-c-10"></div>
-      <div class="rec-c-15"></div>
-      <div class="c-15">C15</div>
-      <div class="rec-c-16"></div>
-      <div class="c-16">C16</div>
-      <div class="rec-c-21"></div>
-      <div class="c-21">C21</div>
-      <div class="rec-c-17"></div>
-      <div class="c-17">C17</div>
-      <div class="rec-c-18"></div>
-      <div class="c-18">C18</div>
-      <div class="rec-c-19"></div>
-      <div class="c-19">C19</div>
-      <div class="rec-c-20"></div>
-      <div class="c-20">C20</div>
-      <div class="c-9">C9</div>
-      <div class="c-10">C10</div>
-    </div>
   </body>
 </html>

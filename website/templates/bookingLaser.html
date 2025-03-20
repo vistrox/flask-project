@@ -1,313 +1,105 @@
-{% extends "base.html" %} {% block title %}bookingLaser{% endblock %}
-{% block content %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="stylesheet" href="{{ url_for('static', filename='/LabManager_pj/vars.css') }}" />
-    <link rel="stylesheet" href="{{ url_for('static', filename='/LabManager_pj/BookingLaser/styleLaser.css') }}" />
+{% extends "base.html" %}
 
-    <style>
-       @import url('https://fonts.googleapis.com/css2?family=Tac+One&display=swap'); 
-       @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
-      a, button, input, select, h1, h2, h3, h4, h5, * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        border: none;
-        text-decoration: none;
-        background: none;
-        -webkit-font-smoothing: antialiased;
-      }
-      menu,
-      ol,
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-    <title>Laser Cutter Booking</title>
-  </head>
-  <body>
-    <form method="POST">
-      <div
-        class="booking-laser"
-        style="
-          background: url(booking-laser.png) center;
-          background-size: cover;
-          background-repeat: no-repeat;
-        "
-      >
-        <div class="booking">
-          <div class="bookingframe"></div>
-          <div class="booking2">Booking</div>
-          <div class="time-start-laser">
-            <div class="time-start">Time Start</div>
-            <input type="time" id="time-start" name="booking_start_time" class="box-time-start" required />
-          </div>
-          <div class="time-end-laser">
-            <div class="time-end">Time End</div>
-            <input type="time" id="time-end" name="booking_end_time" class="box-time-end" required />
-          </div>
-          <button type="submit" class="confirm-button">
-            <div class="confirm">Confirm</div>
-          </button>
-          <div class="booking-line"></div>
-          <div class="date-laser">
-            <div class="date">Date</div>
-            <input type="date" id="booking-date" name="booking_date" class="box-date" required />
-          </div>
-          <div class="no-laser">
-            <div class="no">NO.</div>
-            <!-- First dropdown for laser model -->
-            <select id="laser-select" name="booking" class="box-select-laser" required>
-              <option value="" disabled selected>Select Laser Cutter</option>
-              <option value="TS6090L">TS6090L</option>
-              <option value="MIT-6040">MIT Laser 6040</option>
-              <option value="SCTECH-1390E">SCTECH 1390E</option>
-            </select>
-            
-            <!-- Add this new dropdown for laser number -->
-            <select id="laser-number" name="laser_number" class="box-select-number" required>
-              <option value="" disabled selected>Select Number</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>
-          </div>
-          <div class="equipments-laser">
-            <div class="equipments">Equipments</div>
-            <div clas<img class="vector2" src="vector1.svg" />
-            <img class="vector2" src="vector1.svg" />
+{% block styles %}
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ url_for('static', filename='LabManager_pj/BookingLaser/styleLaser.css') }}" />
+{% endblock %}
+
+{% block title %}Booking Laser Cutter{% endblock %}
+
+{% block content %}
+<header class="header">
+    <nav>
+        <div class="nav__bar">
+            <div class="logo">
+                <div class="lab-manager">Lab Manager</div>
+                <span class="btn booking-laser">: Booking Laser Cutter</span>
+                <img src="{{ url_for('static', filename='LabManager_pj/BookingLaser/img/iconLaser.png') }}" alt="bookingLaser">
             </div>
-            <img class="vector2" src="vector1.svg" />
-          </div>
-          <div class="bar"></div>
-          <div class="log-in">Log In</div>
-          <div class="lab-manager">Lab Manager</div>
-          <img class="rec-laser" src="rec-laser0.svg" />
-          <div
-            class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm"
-          >
-            <span>
-              <span
-                class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span"
-              >
-                Equipments:
-              </span>
-              <span
-                class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span2"
-              >
-                TS6090L
-                <br />
-              </span>
-              <span
-                class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span3"
-              >
-                <br />
-                Amount:
-              </span>
-              <span
-                class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span4"
-              >
-                2
-                <br />
-              </span>
-              <span
-                class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span5"
-              >
-                <br />
-                Highlight:
-                <br />
-              </span>
-              <ul
-                class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span6"
-              >
-                <li>
-                  applicable material: acrylic, Glass, Leather, MDF, paper,
-                  Plastic, Plexiglax, Plywood, Rubber, Stone, Wood, Crystal
-                </li>
-                <li>cutting area: 600*900mm</li>
-                <li>cutting thickness: 0-30mm</li>
-              </ul>
-              <span
-                class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span7"
-              >
-                <br />
-              </span>
-              <span
-                class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span8"
-              >
-                <br />
-                <br />
-              </span>
-              <span
-                class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span9"
-              >
-                <br />
-                <br />
-              </span>
-              <span
-                class="equipments-ts-6090-l-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-600-900-mm-cutting-thickness-0-30-mm-span10"
-              >
-                <br />
-                <br />
-                <br />
-              </span>
-            </span>
-          </div>
-          <div
-            class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm"
-          >
-            <span>
-              <span
-                class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span"
-              >
-                Equipments:
-              </span>
-              <span
-                class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span2"
-              >
-                MIT Laser 6040
-                <br />
-              </span>
-              <span
-                class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span3"
-              >
-                <br />
-                Amount:
-              </span>
-              <span
-                class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span4"
-              >
-                2
-                <br />
-              </span>
-              <span
-                class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span5"
-              >
-                <br />
-                Highlight:
-                <br />
-              </span>
-              <ul
-                class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span6"
-              >
-                <li>
-                  applicable material: acrylic, Glass, Leather, MDF, paper,
-                  Plastic, Plexiglax, Plywood, Rubber, Stone, Wood, Crystal
-                </li>
-                <li>cutting area: 40 x 60 cm</li>
-                <li>cutting thickness: 0-25 mm</li>
-              </ul>
-              <span
-                class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span7"
-              >
-                <br />
-                <br />
-              </span>
-              <span
-                class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span8"
-              >
-                <br />
-                <br />
-              </span>
-              <span
-                class="equipments-mit-laser-6040-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-40-x-60-cm-cutting-thickness-0-25-mm-span9"
-              >
-                <br />
-                <br />
-                <br />
-              </span>
-            </span>
-          </div>
-          <div
-            class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm"
-          >
-            <span>
-              <span
-                class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span"
-              >
-                Equipments:
-              </span>
-              <span
-                class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span2"
-              >
-                SCTECH 1390E-Series
-                <br />
-              </span>
-              <span
-                class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span3"
-              >
-                <br />
-                Amount:
-              </span>
-              <span
-                class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span4"
-              >
-                2
-                <br />
-              </span>
-              <span
-                class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span5"
-              >
-                <br />
-                Highlight:
-                <br />
-              </span>
-              <ul
-                class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span6"
-              >
-                <li>
-                  applicable material: acrylic, Glass, Leather, MDF, paper,
-                  Plastic, Plexiglax, Plywood, Rubber, Stone, Wood, Crystal
-                </li>
-                <li>cutting area: 1300x900 mm</li>
-                <li>cutting thickness: 0.1 - 30 mm</li>
-              </ul>
-              <span
-                class="equipments-sctech-1390-e-series-amount-2-highlight-applicable-material-acrylic-glass-leather-mdf-paper-plastic-plexiglax-plywood-rubber-stone-wood-crystal-cutting-area-1300-x-900-mm-cutting-thickness-0-1-30-mm-span7"
-              >
-                <br />
-                <br />
-                <br />
-              </span>
-            </span>
-          </div>
-          <img
-            class="laser-cutting-machine-1"
-            src="{{ url_for('static', filename='/LabManager_pj/BookingLaser/iconLaser.png') }}"
-          />
-          <img class="mit-laser-1" src="{{ url_for('static', filename='/LabManager_pj/BookingLaser/mitLaser.png') }}" />
-          <img class="sctech-laser-1" src="{{ url_for('static', filename='/LabManager_pj/BookingLaser/sctechLaser.png') }}" />
-          <img class="ts-6090-laser-1" src="{{ url_for('static', filename='/LabManager_pj/BookingLaser/TS6090Laser.png') }}" />
         </div>
-        <div class="home">HOME</div>
-        <a href="{{ url_for('views.home') }}" class="home">HOME</a>
-        
-        <a href="{{ url_for('views.home') }}">
-          <img class="icon-back-1" src="{{ url_for('static', filename='/LabManager_pj/BookingLaser/iconBack.png') }}" alt="arrow-back" />
-        </a>
-        <div class="heading">
-          <div class="red-label">
-            <div class="label">Booking Laser Cutter</div>
-          </div>
+        <a href="{{ url_for('views.home') }}" class="btn nav__btn">HOME</a>
+    </nav>
+</header>
+
+<div class="main">
+    <div class="info">
+        <img src="{{ url_for('static', filename='LabManager_pj/BookingLaser/img/infoLaser.PNG') }}" alt="info-laser">
+    </div>
+
+    <div class="userInput">
+        <div class="frame">
+            <p class="underline-bg">Booking</p>
+            <form method="POST">
+                <!-- Equipments section -->
+                <div class="equipments">
+                    <p>Equipments</p>
+                    <select name="booking" class="box-select-laser" required>
+                        <option value="" disabled selected>Select Laser Cutter</option>
+                        <option value="MIT Laser 6040">MIT Laser 6040</option>
+                        <option value="TS6090L">TS6090L</option>
+                        <option value="SCTECH 1390E-Series">SCTECH 1390E-Series</option>
+                    </select>
+                </div>
+
+                <!-- Number Selection -->
+                <div class="no-laser">
+                    <p>No.</p>
+                    <select id="laser-select" name="laser_number" class="no-box" required>
+                        <option value="" disabled selected>Select No.</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+
+                <!-- Date Selection -->
+                <div class="date-laser">
+                    <p class="date">Date</p>
+                    <input type="date" id="booking-date" name="booking_date" class="boxDate" required/>
+                </div>
+
+                <!-- Time Start -->
+                <div class="time-start-laser">
+                    <p class="time-start">Time Start</p>
+                    <input type="time" id="time-start" name="booking_start_time" class="box-time-start" required/>
+                </div>
+
+                <!-- Time End -->
+                <div class="time-end-laser">
+                    <p class="time-end">Time End</p>
+                    <input type="time" id="time-end" name="booking_end_time" class="box-time-end" required/>
+                </div>
+
+                <!-- Confirm Button -->
+                <div class="button-confirm">
+                    <button type="submit" class="confirm">Confirm</button>
+                </div>
+            </form>
         </div>
-        <img class="icon-date" src="{{ url_for('static', filename='/LabManager_pj/BookingLaser/iconDate.png') }}" />
-      </div>
-    </form>
-  </body>
-</html>
+    </div>
+</div>
 {% endblock %}
 
 {% block scripts %}
 <script>
 document.querySelector('form').addEventListener('submit', function(e) {
-    const startInput = document.getElementById('time-start');
-    const endInput = document.getElementById('time-end');
-    
-    if (startInput.value >= endInput.value) {
+    const startTime = document.getElementById('time-start').value;
+    const endTime = document.getElementById('time-end').value;
+
+    if (startTime >= endTime) {
         e.preventDefault();
         alert('End time must be later than start time');
+        return;
+    }
+
+    if (!document.querySelector('.box-select-laser').value || 
+        !document.querySelector('.no-box').value || 
+        !document.getElementById('booking-date').value || 
+        !startTime || 
+        !endTime) {
+        e.preventDefault();
+        alert('Please fill in all required fields!');
+        return;
     }
 });
 </script>

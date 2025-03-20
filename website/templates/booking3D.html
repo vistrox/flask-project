@@ -1,267 +1,108 @@
-{% extends "base.html" %} {% block title %}booking3D{% endblock %}
+{% extends "base.html" %}
+
+{% block styles %}
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ url_for('static', filename='LabManager_pj/Booking3D/style3D.css') }}" />
+{% endblock %}
+
+{% block title %}Booking 3D Printer{% endblock %}
+
 {% block content %}
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-
-    <!-- Link to external stylesheets -->
-    <link rel="stylesheet" href="{{url_for('static', filename='/LabManager_pj/Booking3D/style3D.css' )}} " />
-    <link rel="stylesheet" href="{{url_for('static', filename='/LabManager_pj/vars.css')}}" />
-
-    <!-- Internal CSS reset to ensure consistent styling -->
-    <style>
-       @import url('https://fonts.googleapis.com/css2?family=Tac+One&display=swap'); 
-       @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
-      a,
-      button,
-      input,
-      select,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        border: none;
-        text-decoration: none;
-        background: none;
-        -webkit-font-smoothing: antialiased;
-      }
-
-      menu,
-      ol,
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-
-    <!-- Page Title -->
-    <title>Document</title>
-  </head>
-  <body>
-    <form method="POST">
-    <!-- Main container for the booking page with a background image -->
-    <div
-      class="booking-3-d"
-      style="
-        background: url(booking-3-d.png) center;
-        background-size: cover;
-        background-repeat: no-repeat;
-      "
-    >
-      <!-- Booking section -->
-      <div class="booking">
-        <!-- Rec booking section (likely for a rectangle or container) -->
-        <div class="rec-booking"></div>
-
-        <!-- Booking text label -->
-        <div class="booking2">Booking</div>
-
-
-        <!-- Equipments section -->
-        <div class="equipments">
-          <div class="equipments2">Equipments</div>
-          
-          <!-- Dropdown for equipment selection -->
-          <select name="booking" class="typebox-3d-select">
-            <option value="" disabled selected>Select 3D Printer</option>
-            <option value="ender-3-s-1-pro">Ender-3 S1 Pro</option>
-            <option value="k1">K1</option>
-          </select>
+<header class="header">
+    <nav>
+        <div class="nav__bar">
+            <div class="logo">
+                <div class="lab-manager">Lab Manager</div>
+                <span class="btn booking-3d">: Booking 3D Printer</span>
+                <img src="{{ url_for('static', filename='LabManager_pj/Booking3D/img/icon3D.png') }}" alt="booking3D">
+            </div>
         </div>
+        <a href="{{ url_for('views.home') }}" class="btn nav__btn">HOME</a>
+    </nav>
+</header>
 
-        <!-- Dropdown for NO. of Equipments-->
-        <div class="no-3-d">
-          <div class="no">NO.</div>
-
-          <select class="box-no">
-            <option value="" disabled selected>Select NO.</option>
-            <option value="1">1</option>
-            <option value="2">2</option>
-            <option value="3">3</option>
-            <option value="4">4</option>
-            <option value="5">5</option>
-            <option value="6">6</option>
-            <option value="7">7</option>
-            <option value="8">8</option>
-            <option value="9">9</option>
-            <option value="10">10</option>
-          </select>
-        </div>
-
-        <!-- Date Selection -->
-        <div class="date-3-d">
-          <div class="date">Date</div>
-          <input type="date" id="booking-date" name="booking_date" class="box-date" required />
-        </div>
-
-        <!-- Time Start -->
-        <div class="time-start-3-d">
-          <div class="time-start">Time Start</div>
-          <input type="time" id="time-start" name="booking_start_time" class="box-time-start" required />
-        </div>
-
-        <!-- Time End -->
-        <div class="time-end-3-d">
-          <div class="time-end2">Time End</div>
-          <input type="time" id="time-end" name="booking_end_time" class="box-time-end" required />
-        </div>
-
-        <!-- Confirm Button -->
-        <button type="submit" class="frame-23">
-          <div class="confirm">Confirm</div>
-        </button>
-        </div>
+<div class="main">
+    <div class="infoS1">
+        <img src="{{ url_for('static', filename='LabManager_pj/Booking3D/img/infoS1.PNG') }}" alt="info-S1">
     </div>
-  </form>
-    </body>
-        <script>
-        function confirmBooking() {
-            let type3D = document.querySelector(".typebox-3d-select").value;
-            let no = document.querySelector(".box-no").value;
-            let date = document.getElementById("booking-date").value;
-            let timeStart = document.getElementById("time-start").value;
-            let timeEnd = document.getElementById("time-end").value;
-        
-            if (!type3D || !no || !date || !timeStart || !timeEnd) {
-                alert("Please fill in all fields before confirming.");
-                return;
-            }
-        
-            let message = `✅ Booking Confirmed!\n\n📌 3D Printer: ${type3D}\n🔢 NO.: ${no}\n📅 Date: ${date}\n⏰ Time: ${timeStart} - ${timeEnd}`;
-            alert(message);
-        }
-    </script>
-
-    
-
-    <!-- Horizontal line (possibly for styling or separation) -->
-    <div class="booking-line"></div>
-
-
-    <!-- Bar section (potentially used for styling or layout) -->
-    <div class="bar"></div>
-
-    <!-- Lab Manager labels -->
-    <div class="lab-manager">Lab Manager</div>
-
-    <!-- 3D Printer icons/images -->
-    <img class="icon-3-d" src="{{url_for ('static', filename='/LabManager_pj/Booking3D/icon3D.png')}}" />
-
-    <!-- Additional equipment details for "Creality Ender-3 S1 Pro" -->
-    <div class="rec-s-1"></div>
-    <div class="equipments-creality-ender-3-s-1-pro">
-      <span>
-        <span class="equipments-creality-ender-3-s-1-pro-span">
-          Equipments:
-        </span>
-        <span class="equipments-creality-ender-3-s-1-pro-span2">
-          Creality Ender-3 S1 Pro
-          <br />
-        </span>
-        <!-- Equipment amount -->
-        <span class="equipments-creality-ender-3-s-1-pro-span3">
-          <br />
-          Amount:
-        </span>
-        <span class="equipments-creality-ender-3-s-1-pro-span4">
-          8
-          <br />
-        </span>
-        <!-- Equipment highlight features -->
-        <span class="equipments-creality-ender-3-s-1-pro-span5">
-          <br />
-          Highlight:
-          <br />
-        </span>
-        <ul class="equipments-creality-ender-3-s-1-pro-span6">
-          <li>Printing size: 220x220x270mm</li>
-          <li>Machine Dimension: 490x455x625 mm</li>
-          <li>Printing Speed: ≤160 mm/s</li>
-          <li>Nozzle Diameter: 0.4 mm</li>
-          <li>Filament Diameter: 1.75 mm</li>
-          <li>File Transfer: Type-C USB/SD card</li>
-          <li>3D File Format: .stl/.bj/.gcode</li>
-        </ul>
-      </span>
+    <div class="infoK1">
+        <img src="{{ url_for('static', filename='LabManager_pj/Booking3D/img/infoK1.PNG') }}" alt="info-K1">
     </div>
 
-    <!-- Additional equipment section for "Creality K1" -->
-    <div class="rec-k-1"></div>
-    <div class="equipments-creality-k-1">
-      <span>
-        <span class="equipments-creality-k-1-span">
-          Equipments:
-        </span>
-        <span class="equipments-creality-k-1-span2">
-          Creality K1
-          <br />
-        </span>
-        <!-- Equipment amount -->
-        <span class="equipments-creality-k-1-span3">
-          <br />
-          Amount:
-        </span>
-        <span class="equipments-creality-k-1-span4">
-          10
-          <br />
-        </span>
-        <!-- Equipment highlight features -->
-        <span class="equipments-creality-k-1-span5">
-          <br />
-          Highlight:
-          <br />
-        </span>
-        <ul class="equipments-creality-k-1-span6">
-          <li>Printing size: 220x220x250mm</li>
-          <li>Machine Dimension: 355x355x480 mm</li>
-          <li>Printing Speed: ≤600 mm/s</li>
-          <li>Nozzle Diameter: 0.4 mm</li>
-          <li>Filament Diameter: 1.75 mm</li>
-          <li>File Transfer: USB drive/WiFi</li>
-          <li>3D File Format: .gcode</li>
-        </ul>
-      </span>
-    </div>
+    <div class="userInput">
+        <div class="frame">
+            <p class="underline-bg">Booking</p>
+            <form method="POST">
+                <!-- Equipments section -->
+                <div class="equipments">
+                    <p>Equipments</p>
+                    <select name="booking" class="typebox-3d-select" required>
+                        <option value="" disabled selected>Select 3D Printer</option>
+                        <option value="Ender-3 S1 Pro">Ender-3 S1 Pro</option>
+                        <option value="K1">K1</option>
+                    </select>
+                </div>
 
-    <!-- 3D printer images -->
-    <img class="_3-d-printer-im-1" src="{{url_for ('static', filename='/LabManager_pj/Booking3D/3DPrinter_IM.png')}}" />
-    <img class="_3-d-printer-1" src="{{url_for ('static', filename='/LabManager_pj/Booking3D/3DPrinter.png')}}" />
-  </div>
+                <!-- Number Selection -->
+                <div class="no-3-d">
+                    <p>No.</p>
+                    <select id="3d-select" name="printer_number" class="box-no" required>
+                        <option value="" disabled selected>Select No.</option>
+                        {% for i in range(1, 11) %}
+                        <option value="{{ i }}">{{ i }}</option>
+                        {% endfor %}
+                    </select>
+                </div>
 
-  <!-- Navigation buttons and labels -->
-  <div class="home">HOME</div>
-      <a href="../" class="home">HOME</a>
-      
-      <a href="../">
-        <img class="icon-back-1" src="{{url_for ('static', filename='/LabManager_pj/Booking3D/iconBack.png')}}" alt="arrow-back" />
-      </a>
-  <div class="heading">
-    <div class="label">
-      <div class="label2">Booking 3D Printer</div>
+                <!-- Date Selection -->
+                <div class="date2">
+                    <p class="Date">Date</p>
+                    <input type="date" id="booking-date" name="booking_date" class="boxDate" required/>
+                </div>
+
+                <!-- Time Start -->
+                <div class="time-start">
+                    <p class="time-start2">Time Start</p>
+                    <input type="time" id="time-start" name="booking_start_time" class="box-time-start" required/>
+                </div>
+
+                <!-- Time End -->
+                <div class="time-end">
+                    <p class="time-end2">Time End</p>
+                    <input type="time" id="time-end" name="booking_end_time" class="box-time-end" required/>
+                </div>
+
+                <!-- Confirm Button -->
+                <div class="button-confirm">
+                    <button type="submit" class="confirm">Confirm</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>
-</body>
-</html>
 {% endblock %}
 
 {% block scripts %}
 <script>
 document.querySelector('form').addEventListener('submit', function(e) {
-    const startTime = document.getElementById('booking_start_time').value;
-    const endTime = document.getElementById('booking_end_time').value;
+    const startTime = document.getElementById('time-start').value;
+    const endTime = document.getElementById('time-end').value;
 
-    startTime = startInput.value;
-    endTime = endInput.value; 
-    
     if (startTime >= endTime) {
         e.preventDefault();
         alert('End time must be later than start time');
+        return;
+    }
+
+    if (!document.querySelector('.typebox-3d-select').value || 
+        !document.querySelector('.box-no').value || 
+        !document.getElementById('booking-date').value || 
+        !startTime || 
+        !endTime) {
+        e.preventDefault();
+        alert('Please fill in all required fields!');
+        return;
     }
 });
 </script>

@@ -1,217 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="./vars.css" />
-    <link rel="stylesheet" href="./styleLaser.css" />
 
-    <style>
-      
-      @import url('https://fonts.googleapis.com/css2?family=Tac+One&display=swap'); 
-      @import url('https://fonts.googleapis.com/css2?family=Tilt+Warp&display=swap');
-      a,
-      button,
-      input,
-      select,
-      h1,
-      h2,
-      h3,
-      h4,
-      h5,
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-        border: none;
-        text-decoration: none;
-        background: none;
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 
-        -webkit-font-smoothing: antialiased;
-      }
+  <link rel="stylesheet" href="styleLaser.css" />
+  <script src="script.js" defer></script>
+</head>
 
-      menu,
-      ol,
-      ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-      }
-    </style>
-    <title>Document</title>
-  </head>
+<body>
+  <!-- แถบ bar-->
+  <header class="header">
+    <nav>
+      <div class="nav__bar">
+        <div class="logo">
+          <div class="lab-manager">Lab Manager</div>
+          <span class="btn booking-laser">: Booking Laser Cutter</span>
+          <img src="./img/iconLaser.png" alt="bookingLaser">
+        </div>
+      </div>
+      <a href="homeIndex.html" class="btn nav__btn">HOME</a>
+    </nav>
+  </header>
+
+  <!-- ข้อมูลอุปกรณ์ -->
+
   <body>
-    <!-- Booking Laser Section -->
-    <div
-      class="booking-laser"
-      style="
-        background: url(booking-laser.png) center;
-        background-size: cover;
-        background-repeat: no-repeat;
-      "
-    >
-      <div class="booking">
-        <div class="bookingframe"></div>
-        <div class="booking2">Booking</div>
-
-        <!-- Horizontal Line -->
-        <div class="booking-line"></div>
+    <div class="main">
+      <div class="info">
+        <img src="./img/infoLaser.PNG" alt="info-laser">
+      </div>
+    </div>
+    <div class="userInput">
+      <div class="frame">
+        <p class="underline-bg">Booking</p>
 
         <!-- Equipments section -->
-        <div class="equipments-laser">
-            <div class="equipments">Equipments</div>
-            
-            <!-- Dropdown for equipment selection -->
-            <select class="box-select-laser">
-              <option value="" disabled selected>Select Laser Cutter</option>
-              <option value="MIT Laser 6040">MIT Laser 6040</option>
-              <option value="TS6090L">TS6090L</option>
-              <option value="SCTECH 1390E-Series">SCTECH 1390E-Series</option>
-            </select>
+        <div class="equipments">
+          <p>Equipments</p>
+          <select class="box-select-laser">
+            <option value="" disabled selected>Select Laser Cutter</option>
+            <option value="MIT Laser 6040">MIT Laser 6040</option>
+            <option value="TS6090L">TS6090L</option>
+            <option value="SCTECH 1390E-Series">SCTECH 1390E-Series</option>
+          </select>
         </div>
-        
-        <!-- Dropdown for NO. of Equipments-->
+        <!-- Computer Selection -->
         <div class="no-laser">
-            <div class="no">NO.</div>
-  
-            <select class="no-box">
-              <option value="" disabled selected>Select NO.</option>
-              <option value="1">1</option>
-              <option value="2">2</option>
-            </select>
-          </div>
-        
+          <p>No.</p>
+          <select id="laser-select" class="no-box">
+            <option value="" disabled selected>Select No.</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+          </select>
+        </div> <!-- no -->
+
         <!-- Date Selection -->
         <div class="date-laser">
-            <div class="date">Date</div>
-            <input type="date" id="booking-date" class="box-date" />
-          </div>
+          <p class="date">Date</p>
+          <input type="date" id="booking-date" class="boxDate" />
+        </div>
 
         <!-- Time Start -->
         <div class="time-start-laser">
-            <div class="time-start">Time Start</div>
-            <input type="time" id="time-start" class="box-time-start" />
+          <p class="time-start">Time Start</p>
+          <input type="time" id="time-start" class="box-time-start" />
         </div>
-  
-          <!-- Time End -->
+
+        <!-- Time End -->
         <div class="time-end-laser">
-            <div class="time-end">Time End</div>
-            <input type="time" id="time-end" class="box-time-end" />
+          <p class="time-end">Time End</p>
+          <input type="time" id="time-end" class="box-time-end" />
         </div>
 
         <!-- Confirm Button -->
-        <div class="confirm-button" onclick="confirmBooking()">
-            <div class="confirm">Confirm</div>
-          </div>
+        <div class="button-confirm" onclick="confirmBooking()">
+          <div class="confirm">Confirm</div>
         </div>
+
+
+
+      </div> <!-- frame -->
     </div>
-        <script>
-        function confirmBooking() {
-            let typeLaser = document.querySelector(".box-select-laser").value;
-            let no = document.querySelector(".no-box").value;
-            let date = document.getElementById("booking-date").value;
-            let timeStart = document.getElementById("time-start").value;
-            let timeEnd = document.getElementById("time-end").value;
-        
-            if (!typeLaser || !no || !date || !timeStart || !timeEnd) {
-                alert("Please fill in all fields before confirming.");
-                return;
-            }
-        
-            let message = `✅ Booking Confirmed!\n\n📌 Laser Cutter: ${typeLaser}\n🔢 NO.: ${no}\n📅 Date: ${date}\n⏰ Time: ${timeStart} - ${timeEnd}`;
-            alert(message);
-        }
-    </script>
-  
 
-        <!-- Bar Section -->
-        <div class="bar"></div>
-
-        <!-- Log In Section -->
-        <div class="log-in">Log In</div>
-
-        <!-- Lab Manager Section -->
-        <div class="lab-manager">Lab Manager</div>
-
-        <!-- Equipment Details for TS6090L -->
-        <div class="rec-ts"></div>
-        <div class="equipments-ts-6090-l">
-          <span>
-            <span class="equipments-ts-6090-l-span">Equipments:</span>
-            <span class="equipments-ts-6090-l-span2">TS6090L<br /></span>
-            <span class="equipments-ts-6090-l-span3"><br />Amount:</span>
-            <span class="equipments-ts-6090-l-span4">2<br /></span>
-            <span class="equipments-ts-6090-l-span5"><br />Highlight:<br /></span>
-            <ul class="equipments-ts-6090-l-span6">
-              <li>applicable material: acrylic, Glass, Leather, MDF, paper, Plastic, Plexiglax, Plywood, Rubber, Stone, Wood, Crystal</li>
-              <li>cutting area: 600*900mm</li>
-              <li>cutting thickness: 0-30mm</li>
-            </ul>
-          </span>
-        </div>
-
-        <!-- Equipment Details for MIT Laser 6040 -->
-        <div class="rec-mit"></div>
-        <div class="equipments-mit">
-          <span>
-            <span class="equipments-mit-span">Equipments:</span>
-            <span class="equipments-mit-span2">MIT Laser 6040<br /></span>
-            <span class="equipments-mit-span3"><br />Amount:</span>
-            <span class="equipments-mit-span4">2<br /></span>
-            <span class="equipments-mit-span5"><br />Highlight:<br /></span>
-            <ul class="equipments-mit-span6">
-              <li>applicable material: acrylic, Glass, Leather, MDF, paper, Plastic, Plexiglax, Plywood, Rubber, Stone, Wood, Crystal</li>
-              <li>cutting area: 40 x 60 cm</li>
-              <li>cutting thickness: 0-25 mm</li>
-            </ul>
-          </span>
-        </div>
-
-        <!-- Equipment Details for SCTECH 1390E-Series -->
-        <div class="rec-sc"></div>
-        <div class="equipments-sctech">
-          <span>
-            <span class="equipments-sctech-span">Equipments:</span>
-            <span class="equipments-sctech-span2">SCTECH 1390E-Series<br /></span>
-            <span class="equipments-sctech-span3"><br />Amount:</span>
-            <span class="equipments-sctech-span4">2<br /></span>
-            <span class="equipments-sctech-span5"><br />Highlight:<br /></span>
-            <ul class="equipments-sctech-span6">
-              <li>applicable material: acrylic, Glass, Leather, MDF, paper, Plastic, Plexiglax, Plywood, Rubber, Stone, Wood, Crystal</li>
-              <li>cutting area: 1300x900 mm</li>
-              <li>cutting thickness: 0.1 - 30 mm</li>
-            </ul>
-          </span>
-        </div>
-
-        <!-- Laser Cutter Images -->
-        <img class="laser-cutting-machine-1" src="iconLaser.png" />
-        <img class="mit-laser-1" src="mitLaser.png" />
-        <img class="sctech-laser-1" src="sctechLaser.png" />
-        <img class="ts-6090-laser-1" src="TS6090Laser.png" />
-      </div>
-
-
-      <!-- Heading Section -->
-      <div class="heading">
-        <div class="red-label">
-          <div class="label">Booking Laser Cutter</div>
-        </div>
-      </div>
-
-    <!-- Navigation buttons and labels -->
-    <div class="home">HOME</div>
-    <a href="../Home/homeIndex.html" class="home">HOME</a>
-    
-    <a href="../Home/homeIndex.html">
-        <img class="icon-back-1" src="iconBack.png" alt="arrow-back" />
-    </a>
-    </div>
-    </div>
-      <!-- Navigation Icons -->
-      <img class="icon-date" src="iconDate.png" />
-    </div>
+    </body>
   </body>
-</html>
 
+  <!-- <body>
+       <div class="userInput">
+               <div class="frame">
+                   <p>Booking</p>
+               </div>
+
+       </div>
+    </body> -->
+
+  <script src="main.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+
+  <script>
+    function confirmBooking() {
+      let typeLaser = document.querySelector(".box-select-laser").value;
+      let no = document.querySelector(".no-box").value;
+      let date = document.getElementById("booking-date").value;
+      let timeStart = document.getElementById("time-start").value;
+      let timeEnd = document.getElementById("time-end").value;
+
+      if (!typeLaser || !no || !date || !timeStart || !timeEnd) {
+        alert("Please fill in all fields before confirming.");
+        return;
+      }
+
+      let message = `✅ Booking Confirmed!\n\n📌 Laser Cutter: ${typeLaser}\n🔢 NO.: ${no}\n📅 Date: ${date}\n⏰ Time: ${timeStart} - ${timeEnd}`;
+      alert(message);
+    }
+  </script>
+
+
+</body>
+
+</html>
